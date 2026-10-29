@@ -1,0 +1,1489 @@
+<title>Harsha Rajesh Kanna</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap">
+
+<style>
+:root {
+  --bg:          #F7F5F2;
+  --bg-warm:     #F0EDE8;
+  --surface:     #FFFFFF;
+  --surface-2:   #FAF9F7;
+  --border:      #E2DDD8;
+  --border-light:#EDE9E4;
+  --muted:       #9E9690;
+  --fg-dim:      #6B6560;
+  --fg:          #1A1714;
+  --accent2:     #8B6F5A;
+  --accent3:     #4A7C6F;
+  --red:         #C0392B;
+  --gold:        #A67C52;
+  --radius-sm:   4px;
+  --radius:      8px;
+  --radius-lg:   16px;
+  --font-body:   'DM Sans', system-ui, sans-serif;
+  --font-serif:  'DM Serif Display', Georgia, serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg:#141210;--bg-warm:#1C1916;--surface:#1F1C19;--surface-2:#252220;
+    --border:#2E2B27;--border-light:#262320;--muted:#7A736C;--fg-dim:#9E958C;
+    --fg:#F0EDE8;--accent2:#C4A882;--accent3:#6BA898;--red:#E05A4A;--gold:#C4943A;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg:#141210;--bg-warm:#1C1916;--surface:#1F1C19;--surface-2:#252220;
+  --border:#2E2B27;--border-light:#262320;--muted:#7A736C;--fg-dim:#9E958C;
+  --fg:#F0EDE8;--accent2:#C4A882;--accent3:#6BA898;--red:#E05A4A;--gold:#C4943A;
+  color-scheme: dark;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:15px;line-height:1.7;min-height:100%}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+h1,h2,h3,h4,h5{text-wrap:balance}
+
+/* LAYOUT */
+.site-wrap{display:grid;grid-template-columns:260px 1fr;min-height:100vh;max-width:1300px;margin:0 auto}
+
+/* SIDENAV */
+.sidenav{position:sticky;top:0;height:100vh;padding:44px 28px 44px 36px;display:flex;flex-direction:column;border-right:1px solid var(--border);overflow-y:auto;background:var(--bg)}
+.nav-name{font-family:var(--font-serif);font-size:21px;line-height:1.2;letter-spacing:-0.3px;color:var(--fg);margin-bottom:3px}
+.nav-title{font-size:11px;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);margin-bottom:40px;font-weight:400}
+.nav-section-label{font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:7px;margin-top:28px;font-weight:500}
+.nav-links{list-style:none;display:flex;flex-direction:column;gap:1px}
+.nav-links li a{display:block;font-size:13px;font-weight:400;color:var(--fg-dim);padding:5px 8px;border-radius:var(--radius-sm);transition:color .15s,background .15s;letter-spacing:.01em}
+.nav-links li a:hover,.nav-links li a.active{color:var(--fg);background:var(--bg-warm)}
+.nav-footer{margin-top:auto;padding-top:28px;display:flex;flex-direction:column;gap:10px}
+.nav-connect-label{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;font-weight:500}
+.nav-contact-row{display:flex;gap:8px;flex-wrap:wrap}
+.nav-link-pill{font-size:11px;letter-spacing:.04em;color:var(--muted);border:1px solid var(--border);padding:5px 11px;border-radius:20px;transition:color .15s,border-color .15s;display:flex;align-items:center;gap:5px}
+.nav-link-pill:hover{color:var(--fg);border-color:var(--fg-dim)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--muted);font-size:11px;padding:5px 12px;border-radius:20px;cursor:pointer;font-family:var(--font-body);letter-spacing:.04em;transition:color .15s,border-color .15s;width:fit-content}
+.theme-btn:hover{color:var(--fg);border-color:var(--fg-dim)}
+
+/* MAIN */
+.main-content{padding:60px 52px 120px;max-width:900px}
+
+/* HERO */
+.hero-section{padding-bottom:68px;border-bottom:1px solid var(--border);margin-bottom:68px}
+.hero-eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+.hero-name{font-family:var(--font-serif);font-size:clamp(44px,5.5vw,70px);line-height:1.0;letter-spacing:-2px;color:var(--fg);margin-bottom:22px}
+.hero-name em{font-style:italic;color:var(--accent2)}
+.hero-bio{font-size:15px;color:var(--fg-dim);max-width:580px;line-height:1.8;margin-bottom:32px}
+.hero-stats{display:flex;gap:36px;flex-wrap:wrap}
+.hero-stat-item{display:flex;flex-direction:column;gap:3px}
+.hero-stat-num{font-family:var(--font-serif);font-size:26px;color:var(--fg);letter-spacing:-1px;line-height:1;font-variant-numeric:tabular-nums}
+.hero-stat-label{font-size:10px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+
+/* SECTION */
+.section{margin-bottom:84px}
+.section-header{display:flex;align-items:baseline;gap:14px;margin-bottom:36px}
+.section-num{font-size:11px;color:var(--muted);letter-spacing:.1em;font-variant-numeric:tabular-nums;min-width:26px}
+.section-title{font-family:var(--font-serif);font-size:28px;letter-spacing:-0.5px;color:var(--fg);line-height:1.1}
+
+/* PROJECT CARDS */
+.projects-grid{display:flex;flex-direction:column;gap:3px}
+.proj-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:border-color .2s,box-shadow .2s}
+.proj-card:hover{border-color:var(--fg-dim);box-shadow:0 4px 24px rgba(0,0,0,.06)}
+.proj-visual{width:100%;overflow:hidden;background:var(--bg-warm)}
+.proj-visual-content{width:100%;min-height:300px;display:flex;align-items:stretch;justify-content:stretch}
+.proj-visual-content > *{width:100%}
+.proj-body{padding:28px 32px 32px}
+.proj-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.proj-tag{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:3px 8px;border-radius:20px;font-weight:500}
+.proj-title{font-family:var(--font-serif);font-size:21px;letter-spacing:-0.3px;color:var(--fg);margin-bottom:9px;line-height:1.25}
+.proj-desc{font-size:13.5px;color:var(--fg-dim);line-height:1.7;margin-bottom:20px;max-width:560px}
+.proj-outcomes{display:flex;gap:28px;flex-wrap:wrap;padding-top:20px;border-top:1px solid var(--border-light)}
+.proj-outcome-item{display:flex;flex-direction:column;gap:3px}
+.proj-outcome-num{font-family:var(--font-serif);font-size:22px;color:var(--fg);letter-spacing:-0.5px;line-height:1;font-variant-numeric:tabular-nums}
+.proj-outcome-label{font-size:10px;color:var(--muted);letter-spacing:.05em;text-transform:uppercase}
+
+/* EXPERIENCE */
+.exp-list{display:flex;flex-direction:column}
+.exp-item{display:grid;grid-template-columns:110px 1fr;gap:20px;padding:26px 0;border-bottom:1px solid var(--border-light)}
+.exp-item:first-child{padding-top:0}
+.exp-item:last-child{border-bottom:none;padding-bottom:0}
+.exp-date{font-size:11px;color:var(--muted);letter-spacing:.04em;line-height:1.5;padding-top:2px}
+.exp-role{font-size:15px;font-weight:600;color:var(--fg);margin-bottom:1px;letter-spacing:-0.2px}
+.exp-company{font-size:13px;color:var(--accent2);margin-bottom:9px;font-weight:500}
+.exp-bullets{list-style:none;display:flex;flex-direction:column;gap:5px}
+.exp-bullets li{font-size:13px;color:var(--fg-dim);line-height:1.65;padding-left:13px;position:relative}
+.exp-bullets li::before{content:'';position:absolute;left:0;top:9px;width:4px;height:4px;border-radius:50%;background:var(--muted)}
+.exp-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}
+.exp-tag{font-size:10px;color:var(--muted);border:1px solid var(--border);padding:2px 8px;border-radius:20px;letter-spacing:.04em}
+
+/* LEADERSHIP */
+.lead-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px}
+.lead-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px 26px;display:flex;flex-direction:column;gap:9px}
+.lead-org{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.lead-role{font-family:var(--font-serif);font-size:17px;color:var(--fg);letter-spacing:-0.2px;line-height:1.25}
+.lead-desc{font-size:13px;color:var(--fg-dim);line-height:1.65;flex:1}
+.lead-metric{font-family:var(--font-serif);font-size:20px;color:var(--accent2);letter-spacing:-0.5px;line-height:1;font-variant-numeric:tabular-nums}
+.lead-metric-label{font-size:10px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:1px}
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:3px}
+.skill-group{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px 26px}
+.skill-group-title{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;font-weight:500}
+.skill-items{display:flex;flex-wrap:wrap;gap:6px}
+.skill-item{font-size:12px;color:var(--fg-dim);background:var(--bg-warm);border:1px solid var(--border-light);padding:4px 10px;border-radius:var(--radius-sm)}
+
+/* CERTS */
+.certs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:3px;grid-auto-rows:1fr}
+.cert-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px 24px;display:flex;flex-direction:column;gap:6px}
+.cert-issuer{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.cert-name{font-size:14px;font-weight:600;color:var(--fg);letter-spacing:-0.1px}
+.cert-year{font-size:12px;color:var(--fg-dim)}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 240px;gap:44px;align-items:start}
+.about-text{font-size:14.5px;color:var(--fg-dim);line-height:1.8}
+.about-text p+p{margin-top:1em}
+.about-aside{display:flex;flex-direction:column;gap:18px}
+.about-aside-block{border-top:1px solid var(--border-light);padding-top:14px}
+.about-aside-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.about-aside-items{display:flex;flex-direction:column;gap:3px}
+.about-aside-item{font-size:13px;color:var(--fg-dim)}
+
+/* CONNECT */
+.connect-section{margin-bottom:84px}
+.connect-inner{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:40px 44px;display:flex;align-items:flex-start;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.connect-text-col{flex:1;min-width:200px}
+.connect-heading{font-family:var(--font-serif);font-size:30px;letter-spacing:-0.5px;color:var(--fg);margin-bottom:10px}
+.connect-sub{font-size:14px;color:var(--fg-dim);line-height:1.7;max-width:380px}
+.connect-links{display:flex;flex-direction:column;gap:10px;flex-shrink:0}
+.connect-link-item{display:flex;align-items:center;gap:10px;padding:12px 16px;border:1px solid var(--border);border-radius:var(--radius);transition:border-color .15s,background .15s;text-decoration:none;color:var(--fg)}
+.connect-link-item:hover{border-color:var(--fg-dim);background:var(--bg-warm)}
+.connect-link-icon{width:20px;height:20px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+.connect-link-label{font-size:13px;font-weight:500;color:var(--fg)}
+.connect-link-value{font-size:12px;color:var(--fg-dim)}
+
+/* CHARTS & MOCKUPS */
+
+/* Gantt */
+.gantt-wrap{padding:24px 28px;background:var(--bg-warm);width:100%;min-height:300px}
+.gantt-title{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;font-weight:500}
+.gantt-table{width:100%;border-collapse:collapse}
+.gantt-table th{font-size:10px;letter-spacing:.05em;color:var(--muted);font-weight:400;padding:0 6px 8px;text-align:center;white-space:nowrap}
+.gantt-table th.row-header{text-align:left;width:140px}
+.gantt-table td.row-header{font-size:11px;color:var(--fg-dim);white-space:nowrap;padding-right:10px}
+.gantt-table td.g-cell{padding:3px 3px;height:26px}
+.gantt-block{height:18px;border-radius:4px;background:var(--border);display:flex;align-items:center;padding:0 5px}
+.gantt-block.active{background:var(--accent3);opacity:.75}
+.gantt-block.crit{background:var(--red);opacity:.7}
+.gantt-block.done{background:var(--accent2);opacity:.65}
+.gantt-block-text{font-size:9px;color:#fff;white-space:nowrap;overflow:hidden;letter-spacing:.02em}
+.gantt-legend{display:flex;gap:16px;margin-top:12px;flex-wrap:wrap}
+.gantt-legend-item{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--fg-dim)}
+.gantt-legend-dot{width:10px;height:10px;border-radius:2px}
+
+/* KPOT mockup */
+.kpot-mockup{width:100%;min-height:300px;background:#1A1208;padding:28px;display:flex;flex-direction:column;gap:16px}
+.kpot-headline{font-family:var(--font-serif);font-size:30px;color:#F5E6C8;letter-spacing:-1px;line-height:1}
+.kpot-headline span{color:#E8A44A}
+.kpot-sub{font-size:10px;color:rgba(245,230,200,.35);letter-spacing:.08em;text-transform:uppercase;margin-top:3px}
+.kpot-divider{width:100%;height:1px;background:rgba(245,230,200,.1)}
+.kpot-frameworks{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.kpot-fw-card{background:rgba(245,230,200,.04);border:1px solid rgba(245,230,200,.1);border-radius:10px;padding:16px 18px}
+.kpot-fw-label{font-size:9px;letter-spacing:.1em;color:rgba(245,230,200,.3);text-transform:uppercase;margin-bottom:6px}
+.kpot-fw-name{font-size:12px;font-weight:600;color:rgba(245,230,200,.8);margin-bottom:5px}
+.kpot-fw-outcome{font-family:var(--font-serif);font-size:24px;color:#E8A44A;letter-spacing:-0.5px;line-height:1}
+.kpot-fw-desc{font-size:10px;color:rgba(245,230,200,.35);margin-top:3px;line-height:1.5}
+.kpot-total-bar{background:rgba(232,164,74,.1);border:1px solid rgba(232,164,74,.25);border-radius:10px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
+.kpot-total-label{font-size:10px;color:rgba(245,230,200,.45);letter-spacing:.06em;text-transform:uppercase}
+.kpot-total-num{font-family:var(--font-serif);font-size:26px;color:#E8A44A;letter-spacing:-1px;font-variant-numeric:tabular-nums}
+
+/* AKG mockup */
+.akg-mockup{width:100%;min-height:300px;background:#F8F7F4;padding:28px;display:flex;flex-direction:column;gap:18px}
+.akg-header{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.akg-headline{font-size:13px;color:#1A1714;line-height:1.4;max-width:260px}
+.akg-big-num{font-family:var(--font-serif);font-size:46px;color:#1A1714;line-height:1;letter-spacing:-2px;font-variant-numeric:tabular-nums}
+.akg-big-label{font-size:10px;color:#9E9690;text-transform:uppercase;letter-spacing:.08em;margin-top:2px}
+.akg-steps{display:flex;flex-direction:column;gap:7px}
+.akg-step-row{display:flex;align-items:center;gap:10px}
+.akg-step-num{font-size:10px;color:#9E9690;min-width:14px;font-variant-numeric:tabular-nums}
+.akg-step-label{font-size:11px;color:#1A1714;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.akg-bar-track{flex:0 0 180px;height:12px;background:#E8E4DF;border-radius:6px;overflow:hidden}
+.akg-bar-fill{height:100%;border-radius:6px;background:#1A1714}
+.akg-bar-fill.bottleneck{background:#C0392B}
+.akg-step-val{font-size:11px;color:#1A1714;font-variant-numeric:tabular-nums;min-width:44px;text-align:right}
+.akg-coolers-row{display:flex;gap:3px;align-items:flex-end;height:56px}
+.akg-cooler-bar{flex:1;border-radius:3px 3px 0 0;background:#1A1714}
+.akg-cooler-bar.slow{background:#C0392B}
+.akg-cooler-bar.fast{background:#4A7C6F}
+.akg-note{font-size:10px;color:#9E9690;border-top:1px solid #E8E4DF;padding-top:10px;line-height:1.6}
+
+/* Fathom CRM mockup */
+.crm-mockup{width:100%;min-height:300px;background:#0F1117;padding:22px;font-family:var(--font-body)}
+.crm-topbar{display:flex;align-items:center;gap:0;margin-bottom:18px;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:12px}
+.crm-logo{font-size:14px;font-weight:600;color:#fff;letter-spacing:-0.3px;margin-right:28px}
+.crm-nav-items{display:flex;gap:3px}
+.crm-nav-item{font-size:11px;color:rgba(255,255,255,.4);padding:4px 10px;border-radius:5px;cursor:default}
+.crm-nav-item.active-nav{background:rgba(255,255,255,.08);color:rgba(255,255,255,.9)}
+.crm-greeting{font-size:13px;font-weight:600;color:rgba(255,255,255,.9);margin-bottom:2px}
+.crm-sub{font-size:10px;color:rgba(255,255,255,.35);margin-bottom:14px}
+.crm-tiles{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
+.crm-tile{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:9px;padding:12px 16px;flex:1;min-width:80px}
+.crm-tile-num{font-size:20px;font-weight:700;color:#fff;line-height:1;font-variant-numeric:tabular-nums}
+.crm-tile-label{font-size:9px;color:rgba(255,255,255,.35);margin-top:2px;letter-spacing:.04em}
+.crm-tile.highlight{border-color:rgba(99,210,180,.3);background:rgba(99,210,180,.06)}
+.crm-tile.highlight .crm-tile-num{color:#63d2b4}
+.crm-pipeline{display:flex;flex-direction:column;gap:5px}
+.crm-pipeline-row{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:6px;padding:7px 10px}
+.crm-pipeline-name{font-size:11px;color:rgba(255,255,255,.7);flex:1}
+.crm-pipeline-stage{font-size:9px;padding:2px 7px;border-radius:20px;letter-spacing:.04em}
+.stage-pursue{background:rgba(99,210,180,.12);color:#63d2b4}
+.stage-research{background:rgba(255,200,80,.12);color:#ffc850}
+.stage-cold{background:rgba(255,255,255,.06);color:rgba(255,255,255,.35)}
+.crm-icp{font-size:10px;font-variant-numeric:tabular-nums;color:rgba(255,255,255,.4);min-width:28px;text-align:right}
+
+/* ALBP mockup */
+.albp-mockup{width:100%;min-height:300px;background:#EDF2F4;padding:28px;display:flex;flex-direction:column;gap:18px}
+.albp-header{font-size:13px;color:#1A1714;line-height:1.4;max-width:420px}
+.albp-comparison{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.albp-col{background:#fff;border:1px solid #D8DEE3;border-radius:10px;padding:18px}
+.albp-col-label{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#8B9BAA;margin-bottom:9px}
+.albp-stations{display:flex;flex-direction:column;gap:5px}
+.albp-station{display:flex;align-items:center;gap:7px;background:#F4F6F8;border-radius:5px;padding:7px 10px}
+.albp-station.robot-station{background:rgba(74,124,111,.08);border:1px solid rgba(74,124,111,.2)}
+.albp-station-num{font-size:9px;color:#8B9BAA;min-width:18px;font-variant-numeric:tabular-nums}
+.albp-station-bar{flex:1;height:7px;background:#D8DEE3;border-radius:4px;overflow:hidden}
+.albp-station-fill{height:100%;border-radius:4px;background:#1A1714}
+.albp-station-fill.rf{background:#4A7C6F}
+.albp-station-time{font-size:10px;color:#1A1714;font-variant-numeric:tabular-nums;min-width:34px;text-align:right}
+.albp-robot-badge{font-size:8px;background:rgba(74,124,111,.12);color:#4A7C6F;padding:1px 4px;border-radius:3px;letter-spacing:.04em}
+.albp-summary-row{background:rgba(74,124,111,.08);border:1px solid rgba(74,124,111,.15);border-radius:10px;padding:12px 18px;display:flex;align-items:center;justify-content:space-between}
+.albp-summary-label{font-size:12px;color:#1A1714}
+.albp-summary-highlight{font-family:var(--font-serif);font-size:16px;color:#4A7C6F}
+
+/* Additive Manufacturing mockup */
+.addmfg-mockup{width:100%;min-height:300px;background:#F0F4FF;padding:28px;display:flex;flex-direction:column;gap:18px}
+.addmfg-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.addmfg-title{font-size:13px;color:#1A2A4A;line-height:1.4;max-width:300px}
+.addmfg-big{font-family:var(--font-serif);font-size:38px;color:#2B4A8A;letter-spacing:-1px;line-height:1;font-variant-numeric:tabular-nums}
+.addmfg-big-label{font-size:10px;color:#7A8BAA;text-transform:uppercase;letter-spacing:.07em;margin-top:2px}
+.addmfg-process-flow{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.addmfg-step-box{background:#fff;border:1px solid #C8D6F0;border-radius:8px;padding:8px 12px;flex:1;min-width:70px;text-align:center}
+.addmfg-step-name{font-size:10px;font-weight:600;color:#2B4A8A;letter-spacing:.02em}
+.addmfg-step-sub{font-size:9px;color:#7A8BAA;margin-top:1px}
+.addmfg-step-arrow{font-size:14px;color:#C8D6F0;flex-shrink:0}
+.addmfg-metrics{display:flex;gap:20px;flex-wrap:wrap;padding-top:14px;border-top:1px solid #C8D6F0}
+.addmfg-metric{display:flex;flex-direction:column;gap:2px}
+.addmfg-metric-val{font-family:var(--font-serif);font-size:22px;color:#2B4A8A;letter-spacing:-0.5px;line-height:1}
+.addmfg-metric-label{font-size:9px;color:#7A8BAA;text-transform:uppercase;letter-spacing:.06em}
+.addmfg-compare{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.addmfg-compare-card{background:#fff;border:1px solid #C8D6F0;border-radius:8px;padding:12px 14px}
+.addmfg-compare-label{font-size:9px;color:#7A8BAA;text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px}
+.addmfg-compare-val{font-family:var(--font-serif);font-size:20px;color:#2B4A8A;letter-spacing:-0.5px}
+.addmfg-compare-desc{font-size:10px;color:#7A8BAA;margin-top:2px;line-height:1.4}
+
+/* PCIe */
+.pcie-mockup{width:100%;min-height:280px;background:#0B0F1A;padding:28px;display:flex;flex-direction:column;gap:14px}
+.pcie-badge{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(130,180,255,.45);border:1px solid rgba(130,180,255,.14);padding:2px 7px;border-radius:20px}
+.pcie-title{font-family:var(--font-serif);font-size:20px;color:rgba(220,235,255,.95);letter-spacing:-0.3px}
+.pcie-spec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.pcie-spec{background:rgba(130,180,255,.04);border:1px solid rgba(130,180,255,.1);border-radius:7px;padding:12px}
+.pcie-spec-val{font-family:var(--font-serif);font-size:20px;color:rgba(130,180,255,.85);letter-spacing:-0.5px;line-height:1}
+.pcie-spec-label{font-size:9px;color:rgba(220,235,255,.3);text-transform:uppercase;letter-spacing:.06em;margin-top:3px}
+.pcie-lanes{display:flex;gap:3px;flex-wrap:wrap}
+.pcie-lane{width:24px;height:7px;border-radius:2px;background:rgba(130,180,255,.12)}
+.pcie-lane.active{background:rgba(130,180,255,.55)}
+.pcie-lane.active.burst{background:rgba(130,180,255,.85)}
+
+/* RAG mockup */
+.rag-mockup{width:100%;min-height:280px;background:#F9F7F4;padding:28px;display:flex;flex-direction:column;gap:12px}
+.rag-label{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.rag-msg{display:flex;gap:9px;align-items:flex-start}
+.rag-avatar{width:24px;height:24px;border-radius:50%;background:var(--bg-warm);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--muted);flex-shrink:0}
+.rag-bubble{background:var(--surface);border:1px solid var(--border);border-radius:7px;padding:9px 12px;font-size:11.5px;color:var(--fg);line-height:1.6;max-width:430px}
+.rag-bubble.ai{background:var(--bg-warm);border-color:var(--border-light)}
+.rag-source{font-size:9px;color:var(--muted);border:1px solid var(--border-light);padding:1px 6px;border-radius:3px;margin-top:5px;display:inline-block}
+.rag-stats{display:flex;gap:18px;padding-top:12px;border-top:1px solid var(--border-light)}
+.rag-stat-val{font-family:var(--font-serif);font-size:19px;color:var(--fg);letter-spacing:-0.5px;line-height:1}
+.rag-stat-label{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+
+/* Eadrom */
+.eadrom-mockup{width:100%;min-height:280px;background:#0C1220;padding:28px;display:flex;flex-direction:column;gap:14px}
+.eadrom-cam-frame{width:170px;height:110px;border:1px solid rgba(255,255,255,.1);border-radius:5px;background:#080D18;position:relative;overflow:hidden;flex-shrink:0}
+.eadrom-scan-line{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(99,210,180,.6),transparent);animation:scan 2.5s ease-in-out infinite}
+@keyframes scan{0%{top:0;opacity:1}100%{top:100%;opacity:.3}}
+.eadrom-box{position:absolute;border:1px solid rgba(99,210,180,.5);border-radius:2px;background:rgba(99,210,180,.04)}
+.eadrom-label{position:absolute;bottom:-1px;left:0;font-size:7px;background:rgba(99,210,180,.7);color:#000;padding:1px 3px;border-radius:1px}
+.eadrom-conf-panel{flex:1;display:flex;flex-direction:column;gap:7px}
+.eadrom-conf-name{font-size:10px;color:rgba(220,235,255,.5);flex:1}
+.eadrom-conf-bar{flex:0 0 70px;height:5px;background:rgba(255,255,255,.08);border-radius:3px;overflow:hidden}
+.eadrom-conf-fill{height:100%;border-radius:3px;background:rgba(99,210,180,.6)}
+.eadrom-conf-pct{font-size:10px;color:rgba(99,210,180,.7);min-width:30px;text-align:right;font-variant-numeric:tabular-nums}
+
+/* Econ dashboard */
+.econ-mockup{width:100%;min-height:280px;background:#1B2537;padding:24px;display:flex;flex-direction:column;gap:12px}
+.econ-topbar{display:flex;align-items:center;justify-content:space-between;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.08)}
+.econ-logo{font-size:12px;font-weight:600;color:rgba(220,235,255,.8);letter-spacing:-0.2px}
+.econ-filter{font-size:9px;color:rgba(220,235,255,.3);border:1px solid rgba(255,255,255,.08);padding:2px 7px;border-radius:3px}
+.econ-filter.sel{background:rgba(255,255,255,.06);color:rgba(220,235,255,.7);border-color:rgba(255,255,255,.12)}
+.econ-kpi-row{display:flex;gap:8px}
+.econ-kpi{flex:1;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:7px;padding:10px 12px}
+.econ-kpi-val{font-family:var(--font-serif);font-size:20px;color:rgba(220,235,255,.9);letter-spacing:-0.5px;line-height:1;font-variant-numeric:tabular-nums}
+.econ-kpi-label{font-size:9px;color:rgba(220,235,255,.3);text-transform:uppercase;letter-spacing:.05em;margin-top:2px}
+.econ-kpi-delta{font-size:9px;color:#63d2b4;margin-top:1px}
+.econ-bars{display:flex;align-items:flex-end;gap:3px;height:60px}
+.econ-bar{flex:1;border-radius:2px 2px 0 0;background:rgba(99,167,210,.28)}
+.econ-bar.hi{background:rgba(99,167,210,.6)}
+
+/* LaunchLens mockup */
+.ll-mockup{width:100%;min-height:300px;background:#10201A;padding:24px 26px;display:flex;flex-direction:column;gap:14px;font-family:var(--font-body)}
+.ll-topbar{display:flex;align-items:center;justify-content:space-between;padding-bottom:10px;border-bottom:1px solid rgba(99,210,170,.09)}
+.ll-logo{font-size:11px;font-weight:600;color:rgba(200,240,220,.7);letter-spacing:.04em;text-transform:uppercase}
+.ll-scenario-badge{font-size:9px;color:rgba(99,210,170,.55);border:1px solid rgba(99,210,170,.18);padding:2px 8px;border-radius:20px;letter-spacing:.04em}
+.ll-stat-row{display:flex;gap:8px;flex-wrap:wrap}
+.ll-stat{flex:1;min-width:100px;background:rgba(99,210,170,.05);border:1px solid rgba(99,210,170,.12);border-radius:8px;padding:10px 13px}
+.ll-stat.warn{background:rgba(220,100,60,.06);border-color:rgba(220,100,60,.2)}
+.ll-stat-label{font-size:8.5px;color:rgba(200,240,220,.3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:4px}
+.ll-stat-val{font-family:var(--font-serif);font-size:17px;color:rgba(200,240,220,.85);letter-spacing:-0.3px;line-height:1;font-variant-numeric:tabular-nums}
+.ll-stat.warn .ll-stat-val{color:#E8886A}
+.ll-gantt-section{display:flex;flex-direction:column;gap:6px}
+.ll-gantt-label{font-size:8.5px;color:rgba(200,240,220,.25);text-transform:uppercase;letter-spacing:.07em;margin-bottom:2px}
+.ll-gantt-row{display:flex;align-items:center;gap:7px}
+.ll-gantt-task{font-size:10px;color:rgba(200,240,220,.5);flex:0 0 130px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ll-gantt-track{flex:1;height:8px;background:rgba(255,255,255,.05);border-radius:4px;overflow:visible;position:relative}
+.ll-gantt-bar{height:8px;border-radius:4px;position:absolute;top:0}
+.ll-gantt-bar.base{background:rgba(200,240,220,.15)}
+.ll-gantt-bar.revised{background:rgba(99,210,170,.55);top:0}
+.ll-gantt-bar.shifted{background:rgba(220,120,60,.55)}
+.ll-delta{font-size:9px;font-variant-numeric:tabular-nums;min-width:34px;text-align:right;color:rgba(200,240,220,.3)}
+.ll-delta.red{color:#E8886A}
+.ll-recovery-section{display:flex;flex-direction:column;gap:5px}
+.ll-recovery-label{font-size:8.5px;color:rgba(200,240,220,.25);text-transform:uppercase;letter-spacing:.07em;margin-bottom:1px}
+.ll-recovery-cards{display:flex;gap:6px;flex-wrap:wrap}
+.ll-rc{flex:1;min-width:90px;background:rgba(99,210,170,.04);border:1px solid rgba(99,210,170,.1);border-radius:7px;padding:9px 11px}
+.ll-rc.selected{background:rgba(99,210,170,.1);border-color:rgba(99,210,170,.35)}
+.ll-rc-label{font-size:8.5px;color:rgba(200,240,220,.35);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.ll-rc-date{font-family:var(--font-serif);font-size:13px;color:rgba(200,240,220,.75);letter-spacing:-0.2px;line-height:1.1}
+.ll-rc.selected .ll-rc-date{color:#7DE8C0}
+.ll-rc-sub{font-size:8px;color:rgba(200,240,220,.25);margin-top:2px}
+.ll-rc.selected .ll-rc-sub{color:rgba(125,232,192,.45)}
+
+/* RESPONSIVE */
+@media(max-width:920px){
+  .site-wrap{grid-template-columns:1fr}
+  .sidenav{position:static;height:auto;padding:24px 20px 20px;border-right:none;border-bottom:1px solid var(--border)}
+  .nav-name{font-size:18px;margin-bottom:2px}
+  .nav-title{margin-bottom:16px}
+  .nav-links{flex-direction:row;flex-wrap:wrap;gap:2px}
+  .nav-links li a{font-size:12px;padding:4px 8px}
+  .nav-section-label{margin-top:16px;margin-bottom:4px}
+  .nav-footer{margin-top:16px;padding-top:16px;flex-direction:row;align-items:center;flex-wrap:wrap;gap:8px}
+  .nav-connect-label{display:none}
+  .nav-contact-row{gap:6px}
+  .main-content{padding:36px 20px 80px}
+  .lead-grid,.skills-grid,.certs-grid{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+  .kpot-frameworks,.albp-comparison,.addmfg-compare{grid-template-columns:1fr}
+  .pcie-spec-grid{grid-template-columns:1fr 1fr}
+  .akg-bar-track{flex:0 0 100px}
+  .connect-inner{flex-direction:column;padding:28px 24px}
+  .section{margin-bottom:60px}
+  .section-header{margin-bottom:24px}
+  .hero-section{padding-bottom:48px;margin-bottom:48px}
+}
+@media(max-width:600px){
+  .hero-name{font-size:clamp(36px,10vw,56px);letter-spacing:-1px}
+  .hero-bio{font-size:14px}
+  .hero-stats{gap:18px}
+  .hero-stat-num{font-size:22px}
+  .exp-item{grid-template-columns:1fr;gap:4px}
+  .exp-date{margin-bottom:2px}
+  .akg-bar-track{flex:0 0 60px}
+  .lead-grid{grid-template-columns:1fr}
+  .kpot-frameworks{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:1fr}
+  .certs-grid{grid-template-columns:1fr}
+  .main-content{padding:28px 16px 80px}
+  .proj-body{padding:20px 20px 24px}
+  .section-title{font-size:24px}
+  .connect-inner{padding:24px 20px}
+  .connect-heading{font-size:24px}
+  .akg-mockup,.crm-mockup,.kpot-mockup,.econ-mockup,.albp-mockup{padding:18px}
+  .crm-tiles{gap:5px}
+  .crm-tile{padding:10px 12px}
+  .crm-tile-num{font-size:16px}
+  .akg-coolers-row{height:40px}
+  .about-grid{gap:28px}
+  .nav-contact-row{gap:5px}
+  .nav-link-pill{font-size:10px;padding:4px 9px}
+}
+</style>
+
+<div class="site-wrap">
+  <!-- SIDENAV -->
+  <nav class="sidenav" aria-label="Site navigation">
+    <div class="nav-name">Harsha Rajesh Kanna</div>
+    <div class="nav-title">MEM · NC State University · May 2027</div>
+
+    <p class="nav-section-label">Navigate</p>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#projects" data-section="projects">Projects</a></li>
+      <li><a href="#experience" data-section="experience">Industry Work</a></li>
+      <li><a href="#leadership" data-section="leadership">Leadership</a></li>
+      <li><a href="#skills" data-section="skills">Skills</a></li>
+      <li><a href="#certifications" data-section="certifications">Certifications</a></li>
+      <li><a href="#about" data-section="about">About</a></li>
+      <li><a href="#connect" data-section="connect">Let's Connect</a></li>
+    </ul>
+
+    <div class="nav-footer">
+      <p class="nav-connect-label">Let's Connect</p>
+      <div class="nav-contact-row">
+        <a class="nav-link-pill" href="https://www.linkedin.com/in/harsharajeshkanna/" target="_blank" rel="noopener">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a class="nav-link-pill" href="https://github.com/Harshavars" target="_blank" rel="noopener">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          GitHub
+        </a>
+        <a class="nav-link-pill" href="mailto:hrajesh2@ncsu.edu">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Email
+        </a>
+      </div>
+      <button class="theme-btn" id="themeToggle">Toggle theme</button>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+    <!-- HERO -->
+    <section class="hero-section" id="top">
+      <p class="hero-eyebrow">MS Engineering Management · NC State University · GPA 3.55 · May 2027</p>
+      <h1 class="hero-name">Harsha<br><em>Rajesh Kanna</em></h1>
+      <p class="hero-bio">
+        I build at the intersection of product, project, and operations. From closing $650K in bookings and planning $1.5M for next quarter at e-con Systems, to shipping a production AI chatbot at FIX-IT, to designing pricing frameworks that recovered $351K in annualized revenue , I connect engineering depth with business judgment. Open to co-op and full-time opportunities in product management, project leadership, and operations strategy.
+      </p>
+      <div class="hero-stats">
+        <div class="hero-stat-item">
+          <span class="hero-stat-num">$650K</span>
+          <span class="hero-stat-label">Bookings closed</span>
+        </div>
+        <div class="hero-stat-item">
+          <span class="hero-stat-num">$1.5M</span>
+          <span class="hero-stat-label">Pipeline booked next quarter</span>
+        </div>
+        <div class="hero-stat-item">
+          <span class="hero-stat-num">$351K</span>
+          <span class="hero-stat-label">Revenue unlocked (KPOT)</span>
+        </div>
+        <div class="hero-stat-item">
+          <span class="hero-stat-num">340+</span>
+          <span class="hero-stat-label">SKUs managed</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <h2 class="section-title">Projects</h2>
+      </div>
+      <div class="projects-grid">
+
+        <!-- KPOT -->
+        <article class="proj-card">
+          <div class="proj-visual">
+            <div class="proj-visual-content">
+              <div class="kpot-mockup">
+                <div>
+                  <div class="kpot-headline"><span>+$351K</span> annual profit</div>
+                  <div class="kpot-sub">KPOT AYCE Korean BBQ · Pricing Strategy · Spring 2026</div>
+                </div>
+                <div class="kpot-divider"></div>
+                <div class="kpot-frameworks">
+                  <div class="kpot-fw-card">
+                    <div class="kpot-fw-label">Framework 5</div>
+                    <div class="kpot-fw-name">Day-Part Dynamic Pricing</div>
+                    <div class="kpot-fw-outcome">+$133K</div>
+                    <div class="kpot-fw-desc">Price floor $14.32 (variable cost). Off-peak discounts recover +56 guests/day, +$810/day revenue.</div>
+                  </div>
+                  <div class="kpot-fw-card">
+                    <div class="kpot-fw-label">Frameworks 2 &amp; 4</div>
+                    <div class="kpot-fw-name">Tiered Pricing + Wagyu Premium</div>
+                    <div class="kpot-fw-outcome">+$218K</div>
+                    <div class="kpot-fw-desc">Base $22.99L/$29.99D. Premium tier $33.99L/$44.99D with Wagyu, galbi, priority seating.</div>
+                  </div>
+                </div>
+                <div class="kpot-total-bar">
+                  <div>
+                    <div class="kpot-total-label">Total annualized opportunity</div>
+                    <div style="font-size:9px;color:rgba(245,230,200,.25);margin-top:2px;">424 empty seats/day · 47.1% unused capacity · $26.95 avg guest</div>
+                  </div>
+                  <div class="kpot-total-num">+$351K</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags"><span class="proj-tag">Pricing Strategy</span><span class="proj-tag">Revenue Ops</span><span class="proj-tag">MEM 590</span></div>
+            <h3 class="proj-title">KPOT Pricing Strategy</h3>
+            <p class="proj-desc">Analyzed 424 empty seats per day (47.1% unused capacity) at KPOT , a $3.5B AYCE Korean BBQ chain. Designed two complementary pricing frameworks: day-part dynamic discounting and a Wagyu premium tier, together recovering $351K in annualized profit. Recommended a 60-day dinner-first pilot with monthly tracking, expanding to dynamic pricing by month 12.</p>
+            <div class="proj-outcomes">
+              <div class="proj-outcome-item"><span class="proj-outcome-num">+$133K</span><span class="proj-outcome-label">F5 Day-Part</span></div>
+              <div class="proj-outcome-item"><span class="proj-outcome-num">+$218K</span><span class="proj-outcome-label">F2/F4 Tiered</span></div>
+              <div class="proj-outcome-item"><span class="proj-outcome-num">47.1%</span><span class="proj-outcome-label">Unused capacity</span></div>
+              <div class="proj-outcome-item"><span class="proj-outcome-num">$14.32</span><span class="proj-outcome-label">Variable cost floor</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- AKG Time Study -->
+        <article class="proj-card">
+          <div class="proj-visual">
+            <div class="proj-visual-content">
+              <div class="akg-mockup">
+                <div class="akg-header">
+                  <div class="akg-headline">AKG DDC Cooler Welding<br>Time Study · 12 units observed</div>
+                  <div>
+                    <div class="akg-big-num">22.7</div>
+                    <div class="akg-big-label">min avg per cooler</div>
+                  </div>
+                </div>
+                <div class="akg-steps">
+                  <div class="akg-step-row">
+                    <span class="akg-step-num">1</span>
+                    <span class="akg-step-label">Gather, lay flat, fit check</span>
+                    <div class="akg-bar-track"><div class="akg-bar-fill" style="width:10%"></div></div>
+                    <span class="akg-step-val">1.1 min</span>
+                  </div>
+                  <div class="akg-step-row">
+                    <span class="akg-step-num">2</span>
+                    <span class="akg-step-label">Tacks + MIG weld flat</span>
+                    <div class="akg-bar-track"><div class="akg-bar-fill" style="width:49%"></div></div>
+                    <span class="akg-step-val">11.2 min</span>
+                  </div>
+                  <div class="akg-step-row">
+                    <span class="akg-step-num">3</span>
+                    <span class="akg-step-label">TIG weld, turned 90°</span>
+                    <div class="akg-bar-track"><div class="akg-bar-fill bottleneck" style="width:41%"></div></div>
+                    <span class="akg-step-val" style="color:#C0392B;">9.4 min ↑</span>
+                  </div>
+                  <div class="akg-step-row">
+                    <span class="akg-step-num">4</span>
+                    <span class="akg-step-label">Remove to pallet</span>
+                    <div class="akg-bar-track"><div class="akg-bar-fill" style="width:9%"></div></div>
+                    <span class="akg-step-val">1.0 min</span>
+                  </div>
+                </div>
+                <div>
+                  <div style="font-size:9px;color:#9E9690;margin-bottom:5px;letter-spacing:.04em;">Unit range: 15.7 to 27.5 min across 12 coolers</div>
+                  <div class="akg-coolers-row">
+                    <div class="akg-cooler-bar" style="height:58%"></div>
+                    <div class="akg-cooler-bar" style="height:72%"></div>
+                    <div class="akg-cooler-bar" style="height:63%"></div>
+                    <div class="akg-cooler-bar" style="height:80%"></div>
+                    <div class="akg-cooler-bar slow" style="height:93%"></div>
+                    <div class="akg-cooler-bar fast" style="height:4%;min-height:4px"></div>
+                    <div class="akg-cooler-bar" style="height:50%"></div>
+                    <div class="akg-cooler-bar" style="height:65%"></div>
+                    <div class="akg-cooler-bar slow" style="height:100%"></div>
+                    <div class="akg-cooler-bar" style="height:74%"></div>
+                    <div class="akg-cooler-bar" style="height:55%"></div>
+                    <div class="akg-cooler-bar" style="height:68%"></div>
+                  </div>
+                  <div style="display:flex;justify-content:space-between;font-size:9px;color:#9E9690;margin-top:3px;">
+                    <span style="color:#4A7C6F;">Fastest: 15.7 min (#6)</span>
+                    <span style="color:#C0392B;">Slowest: 27.5 min (#9)</span>
+                  </div>
+                </div>
+                <div class="akg-note">TIG step (3) shows widest variance: 5.9 to 14.7 min. Root causes: core edge fit quality, robot vs hand weld switching, operator variability. Steps 1 and 4 (~2 min) are not tracked in SAP or on the job ticket , a production visibility gap.</div>
+              </div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags"><span class="proj-tag">Industrial Engineering</span><span class="proj-tag">Time Study</span><span class="proj-tag">AKG North America</span></div>
+            <h3 class="proj-title">DDC Cooler Welding Time Study</h3>
+            <p class="proj-desc">Direct-observation time study of 12 heat exchanger coolers on AKG's production floor in Mebane, NC. Decomposed the welding cycle into 4 steps, identifying TIG welding as the primary bottleneck with the widest variance (5.9 to 14.7 min) , driven by core edge fit, robot vs hand switching, and operator variability. Surfaced that Steps 1 and 4 are invisible to SAP and job tickets, a key gap in production data coverage.</p>
+            <div class="proj-outcomes">
+              <div class="proj-outcome-item"><span class="proj-outcome-num">22.7 min</span><span class="proj-outcome-label">Avg cycle time</span></div>
+              <div class="proj-outcome-item"><span class="proj-outcome-num">9.4 min</span><span class="proj-outcome-label">TIG bottleneck</span></div>
+              <div class="proj-outcome-item"><span class="proj-outcome-num">~2 min</span><span class="proj-outcome-label">Missing from SAP</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- KPOT Gantt / Project Management -->
+        <article class="proj-card">
+          <div class="proj-visual">
+            <div class="proj-visual-content">
+              <div class="gantt-wrap">
+                <div class="gantt-title">KPOT Pricing Project · Work Plan &amp; Contingency Management</div>
+                <table class="gantt-table">
+                  <thead>
+                    <tr>
+                      <th class="row-header"></th>
+                      <th>Wk 1</th><th>Wk 2</th><th>Wk 3</th><th>Wk 4</th><th>Wk 5</th><th>Wk 6</th><th>Wk 7</th><th>Wk 8</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="row-header">Market sizing</td>
+                      <td class="g-cell"><div class="gantt-block done"><span class="gantt-block-text">Research</span></div></td>
+                      <td class="g-cell"><div class="gantt-block done"><span class="gantt-block-text">Analysis</span></div></td>
+                      <td class="g-cell"><div class="gantt-block"></div></td><td class="g-cell"><div class="gantt-block"></div></td><td class="g-cell"><div class="gantt-block"></div></td><td class="g-cell"><div class="gantt-block"></div></td><td class="g-cell"><div class="gantt-block"></div></td><td class="g-cell"><div class="gantt-block"></div></td>
+                    </tr>
+                    <tr>
+                      <td class="row-header">Capacity analysis</td>
+                      <td class="g-cell"><div class="gantt-block"></div></td>
+                      <td class="g-cell"><div class="gantt-block done"><span class="gantt-block-text">Data pull</span></div></td>
+                      <td class="g-cell"><div class="gantt-block done"><span class="gantt-block-text">Model</span></div></td>
+                      <td class="g-cell"><div class="gantt-block"></div></td><td class="g-cell"><div class="gantt-block"></div></td><td class="g-cell"><div class="gantt-block"></div></td><td class="g-cell"><div class="gantt-block"></div></td><td class="g-cell"><div class="gantt-block"></div></td>
+                    </tr>
+                    <tr>
+                      <td class="row-header">Framework design</td>
+                      <td class="g-cell"><div class="gantt-block"></div></td><td class="g-cell"><div class="gantt-block"></div></td>
+                      <td class="g-cell"><div class="gantt-block active"><span class="gantt-block-text">F5 design</span></div></td>
+                      <td class="g-cell"><div class="gantt-block active"><span class="gantt-block-text">F2/F4</span></div></td>
+                      <td class="g-cell"><div class="gantt-block active"><span class="gantt-block-text">Validate</span></div></td>
+                      <td class="g-cell"><div class="gantt-block"></div></td><td class="g-cell"><div class="gantt-block"></div></td><td class="g-cell"><div class="gantt-block"></div></td>
+                    </tr>
+                    <tr>
+                      <td class="row-header" style="color:#C0392B;font-weight:600;">Contingency buffer</td>
+                      <td class="g-cell"><div class="gantt-block"></div></td><td class="g-cell"><div class="gantt-block"></div></td><td class="g-cell"><div class="gantt-block"></div></td><td class="g-cell"><div class="gantt-block"></div></td>
+                      <td class="g-cell"><div class="gantt-block crit"><span class="gantt-block-text">Buffer</span></div></td>
+                      <td class="g-cell"><div class="gantt-block crit"><span class="gantt-block-text">Re-scope</span></div></td>
+                      <td class="g-cell"><div class="gantt-block"></div></td><td class="g-cell"><div class="gantt-block"></div></td>
+                    </tr>
+                    <tr>
+                      <td class="row-header">Pilot recommendation</td>
+                      <td class="g-cell"><div class="gantt-block"></div></td><td class="g-cell"><div class="gantt-block"></div></td><td class="g-cell"><div class="gantt-block"></div></td><td class="g-cell"><div class="gantt-block"></div></td><td class="g-cell"><div class="gantt-block"></div></td>
+                      <td class="g-cell"><div class="gantt-block active"><span class="gantt-block-text">60-day pilot</span></div></td>
+                      <td class="g-cell"><div class="gantt-block active"><span class="gantt-block-text">KPIs</span></div></td>
+                      <td class="g-cell"><div class="gantt-block"></div></td>
+                    </tr>
+                    <tr>
+                      <td class="row-header">Final delivery</td>
+                      <td class="g-cell"><div class="gantt-block"></div></td><td class="g-cell"><div class="gantt-block"></div></td><td class="g-cell"><div class="gantt-block"></div></td><td class="g-cell"><div class="gantt-block"></div></td><td class="g-cell"><div class="gantt-block"></div></td><td class="g-cell"><div class="gantt-block"></div></td>
+                      <td class="g-cell"><div class="gantt-block done"><span class="gantt-block-text">Deck</span></div></td>
+                      <td class="g-cell"><div class="gantt-block done"><span class="gantt-block-text">Present</span></div></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="gantt-legend">
+                  <div class="gantt-legend-item"><div class="gantt-legend-dot" style="background:#4A7C6F;opacity:.65"></div><span>Completed</span></div>
+                  <div class="gantt-legend-item"><div class="gantt-legend-dot" style="background:#4A7C6F;opacity:.75"></div><span>In progress</span></div>
+                  <div class="gantt-legend-item"><div class="gantt-legend-dot" style="background:#C0392B;opacity:.7"></div><span>Contingency</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags"><span class="proj-tag">Project Management</span><span class="proj-tag">Contingency Planning</span><span class="proj-tag">Stakeholder Delivery</span></div>
+            <h3 class="proj-title">Real Project Management: KPOT</h3>
+            <p class="proj-desc">Managed the full 8-week KPOT engagement , market sizing, capacity modeling, framework design, and pilot recommendation. Built in a 2-week contingency buffer after initial data access was delayed, enabling re-scoping without missing the final delivery date. Coordinated cross-functional team of 4 across data, pricing design, and stakeholder presentation.</p>
+            <div class="proj-outcomes">
+              <div class="proj-outcome-item"><span class="proj-outcome-num">8 weeks</span><span class="proj-outcome-label">Project timeline</span></div>
+              <div class="proj-outcome-item"><span class="proj-outcome-num">2 weeks</span><span class="proj-outcome-label">Contingency buffer</span></div>
+              <div class="proj-outcome-item"><span class="proj-outcome-num">4 person</span><span class="proj-outcome-label">Team</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Additive Manufacturing -->
+        <article class="proj-card">
+          <div class="proj-visual">
+            <div class="proj-visual-content">
+              <div class="addmfg-mockup">
+                <div class="addmfg-header">
+                  <div class="addmfg-title">Additive Manufacturing in Assembly Lines<br>Hybrid Human-Robot ALBP · ISE 501 · Spring 2026</div>
+                  <div>
+                    <div class="addmfg-big">1 station</div>
+                    <div class="addmfg-big-label">saved at 20s cycle time</div>
+                  </div>
+                </div>
+                <div class="addmfg-process-flow">
+                  <div class="addmfg-step-box">
+                    <div class="addmfg-step-name">Design</div>
+                    <div class="addmfg-step-sub">CAD model</div>
+                  </div>
+                  <span class="addmfg-step-arrow">→</span>
+                  <div class="addmfg-step-box">
+                    <div class="addmfg-step-name">Print</div>
+                    <div class="addmfg-step-sub">FDM/SLA</div>
+                  </div>
+                  <span class="addmfg-step-arrow">→</span>
+                  <div class="addmfg-step-box">
+                    <div class="addmfg-step-name">Cure</div>
+                    <div class="addmfg-step-sub">Post-process</div>
+                  </div>
+                  <span class="addmfg-step-arrow">→</span>
+                  <div class="addmfg-step-box">
+                    <div class="addmfg-step-name">Assemble</div>
+                    <div class="addmfg-step-sub">Robot assist</div>
+                  </div>
+                  <span class="addmfg-step-arrow">→</span>
+                  <div class="addmfg-step-box">
+                    <div class="addmfg-step-name">Inspect</div>
+                    <div class="addmfg-step-sub">QA/pass</div>
+                  </div>
+                </div>
+                <div class="addmfg-compare">
+                  <div class="addmfg-compare-card">
+                    <div class="addmfg-compare-label">Hybrid · 20s cycle</div>
+                    <div class="addmfg-compare-val" style="color:#4A7C6F;">5 stations</div>
+                    <div class="addmfg-compare-desc">2 robot stations integrated via integer programming model in GAMS</div>
+                  </div>
+                  <div class="addmfg-compare-card">
+                    <div class="addmfg-compare-label">Human-only · 20s cycle</div>
+                    <div class="addmfg-compare-val" style="color:#C0392B;">6 stations</div>
+                    <div class="addmfg-compare-desc">Same task set, no robot assistance , one extra workstation required</div>
+                  </div>
+                </div>
+                <div class="addmfg-metrics">
+                  <div class="addmfg-metric"><span class="addmfg-metric-val">18</span><span class="addmfg-metric-label">Tasks modeled</span></div>
+                  <div class="addmfg-metric"><span class="addmfg-metric-val">4 vs 4</span><span class="addmfg-metric-label">Stations at 30s</span></div>
+                  <div class="addmfg-metric"><span class="addmfg-metric-val">GAMS</span><span class="addmfg-metric-label">Solver used</span></div>
+                  <div class="addmfg-metric"><span class="addmfg-metric-val">IP</span><span class="addmfg-metric-label">Model type</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags"><span class="proj-tag">Operations Research</span><span class="proj-tag">GAMS</span><span class="proj-tag">ISE 501</span><span class="proj-tag">Additive Manufacturing</span></div>
+            <h3 class="proj-title">Robots in Assembly Lines</h3>
+            <p class="proj-desc">Built an integer programming model in GAMS to solve the Assembly Line Balancing Problem (ALBP) integrating additive manufacturing and robotics. Modeled 18 tasks across hybrid human-robot vs human-only configurations at two cycle times. Key finding: robots save 1 workstation only under tight cycle time constraints (20s cycle: 5 vs 6 stations). At 30s cycle time, both converge to 4 stations , showing robots are only worth the capital at high throughput demand.</p>
+            <div class="proj-outcomes">
+              <div class="proj-outcome-item"><span class="proj-outcome-num">18 tasks</span><span class="proj-outcome-label">Modeled</span></div>
+              <div class="proj-outcome-item"><span class="proj-outcome-num">5 vs 6</span><span class="proj-outcome-label">Stations at 20s</span></div>
+              <div class="proj-outcome-item"><span class="proj-outcome-num">4 vs 4</span><span class="proj-outcome-label">Stations at 30s</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Fathom CRM / Venture Analytics -->
+        <article class="proj-card">
+          <div class="proj-visual">
+            <div class="proj-visual-content">
+              <div class="crm-mockup">
+                <div class="crm-topbar">
+                  <div class="crm-logo">Fathom · ARMS</div>
+                  <div class="crm-nav-items">
+                    <div class="crm-nav-item active-nav">Home</div>
+                    <div class="crm-nav-item">Accounts</div>
+                    <div class="crm-nav-item">Scoring</div>
+                    <div class="crm-nav-item">Stats</div>
+                  </div>
+                </div>
+                <div class="crm-greeting">Venture Analytics Pipeline 👋</div>
+                <div class="crm-sub">ICP scoring · account prioritization · pilot playbook</div>
+                <div class="crm-tiles">
+                  <div class="crm-tile"><div class="crm-tile-num">6</div><div class="crm-tile-label">Accounts scored</div></div>
+                  <div class="crm-tile highlight"><div class="crm-tile-num">1</div><div class="crm-tile-label">Pursue now</div></div>
+                  <div class="crm-tile"><div class="crm-tile-num">NUWC</div><div class="crm-tile-label">Live pursuit</div></div>
+                </div>
+                <div class="crm-pipeline">
+                  <div class="crm-pipeline-row">
+                    <span class="crm-pipeline-name">Accenture Federal Services</span>
+                    <span class="crm-pipeline-stage stage-pursue">Pursue now</span>
+                    <span class="crm-icp">88</span>
+                  </div>
+                  <div class="crm-pipeline-row">
+                    <span class="crm-pipeline-name">NUWC (Naval Undersea Warfare)</span>
+                    <span class="crm-pipeline-stage stage-pursue">Active pilot</span>
+                    <span class="crm-icp">82</span>
+                  </div>
+                  <div class="crm-pipeline-row">
+                    <span class="crm-pipeline-name">Leidos Holdings</span>
+                    <span class="crm-pipeline-stage stage-research">Research</span>
+                    <span class="crm-icp">74</span>
+                  </div>
+                  <div class="crm-pipeline-row">
+                    <span class="crm-pipeline-name">Booz Allen Hamilton</span>
+                    <span class="crm-pipeline-stage stage-research">Research</span>
+                    <span class="crm-icp">71</span>
+                  </div>
+                  <div class="crm-pipeline-row">
+                    <span class="crm-pipeline-name">SAIC</span>
+                    <span class="crm-pipeline-stage stage-cold">Cold</span>
+                    <span class="crm-icp">58</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags"><span class="proj-tag">Venture Analytics</span><span class="proj-tag">GTM Strategy</span><span class="proj-tag">Fathom · MIE 572</span></div>
+            <h3 class="proj-title">Fathom Venture Analytics</h3>
+            <p class="proj-desc">Built a repeatable account-to-pilot playbook for Fathom's ARMS (Automated Relocatable Modeling System) , a predictive ocean intelligence Data-as-a-Service platform. Developed an ICP scoring framework, scored 6 enterprise accounts, and built account prioritization across maritime safety, ports, and emergency response verticals. Managed the "Emerging Blue Economy" vertical and led stakeholder interviews to drive positioning and market entry strategy.</p>
+            <div class="proj-outcomes">
+              <div class="proj-outcome-item"><span class="proj-outcome-num">6</span><span class="proj-outcome-label">Accounts scored</span></div>
+              <div class="proj-outcome-item"><span class="proj-outcome-num">ICP 88</span><span class="proj-outcome-label">Top account</span></div>
+              <div class="proj-outcome-item"><span class="proj-outcome-num">4</span><span class="proj-outcome-label">Verticals analyzed</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PCIe -->
+        <article class="proj-card">
+          <div class="proj-visual">
+            <div class="proj-visual-content">
+              <div class="pcie-mockup">
+                <div style="display:flex;gap:8px;margin-bottom:10px;">
+                  <span class="pcie-badge">e-con Systems</span>
+                  <span class="pcie-badge">Hardware</span>
+                </div>
+                <div class="pcie-title">PCIe Camera Interface Module</div>
+                <div class="pcie-spec-grid" style="margin-top:12px;">
+                  <div class="pcie-spec"><div class="pcie-spec-val">PCIe 3.0</div><div class="pcie-spec-label">Interface</div></div>
+                  <div class="pcie-spec"><div class="pcie-spec-val">x4</div><div class="pcie-spec-label">Lane config</div></div>
+                  <div class="pcie-spec"><div class="pcie-spec-val">4K</div><div class="pcie-spec-label">Resolution</div></div>
+                </div>
+                <div style="margin-top:12px;">
+                  <div style="font-size:9px;color:rgba(130,180,255,.3);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;">Lane utilization</div>
+                  <div class="pcie-lanes">
+                    <div class="pcie-lane active burst"></div><div class="pcie-lane active burst"></div>
+                    <div class="pcie-lane active"></div><div class="pcie-lane active"></div>
+                    <div class="pcie-lane"></div><div class="pcie-lane"></div><div class="pcie-lane"></div><div class="pcie-lane"></div>
+                  </div>
+                  <div style="font-size:10px;color:rgba(130,180,255,.5);margin-top:5px;font-variant-numeric:tabular-nums;">Link state: L0 · Negotiated x4 · Gen3</div>
+                </div>
+                <div style="background:rgba(130,180,255,.04);border:1px solid rgba(130,180,255,.1);border-radius:7px;padding:10px 12px;margin-top:8px;">
+                  <div style="font-size:9px;color:rgba(130,180,255,.35);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;">Protocols validated</div>
+                  <div style="font-size:11px;color:rgba(220,235,255,.6);line-height:1.6;">PCIe · MIPI · USB 3.0 · GMSL · Ethernet · I2C · I3C</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags"><span class="proj-tag">Hardware</span><span class="proj-tag">Embedded Vision</span><span class="proj-tag">e-con Systems</span></div>
+            <h3 class="proj-title">PCIe Camera Interface</h3>
+            <p class="proj-desc">Built and validated a PCIe Gen 3 x4 camera interface module for high-throughput embedded vision at e-con Systems. Worked across link training, data pipeline validation, and integration testing for a 4K camera solution targeting industrial and robotics platforms. Validated connectivity across PCIe, MIPI, USB, GMSL, Ethernet, I2C, and I3C protocols in OEM manufacturing context.</p>
+            <div class="proj-outcomes">
+              <div class="proj-outcome-item"><span class="proj-outcome-num">PCIe 3.0</span><span class="proj-outcome-label">Interface</span></div>
+              <div class="proj-outcome-item"><span class="proj-outcome-num">7</span><span class="proj-outcome-label">Protocols validated</span></div>
+              <div class="proj-outcome-item"><span class="proj-outcome-num">4K</span><span class="proj-outcome-label">Camera resolution</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Olivia RAG -->
+        <article class="proj-card">
+          <div class="proj-visual">
+            <div class="proj-visual-content">
+              <div class="rag-mockup">
+                <div class="rag-label">Olivia · FIX-IT App · RAG AI Chatbot</div>
+                <div style="display:flex;flex-direction:column;gap:9px;">
+                  <div class="rag-msg">
+                    <div class="rag-avatar">U</div>
+                    <div class="rag-bubble">My kitchen sink is leaking , what's the fastest way to get someone out here?</div>
+                  </div>
+                  <div class="rag-msg">
+                    <div class="rag-avatar" style="background:var(--accent3);border-color:var(--accent3);color:#fff;font-size:8px;">AI</div>
+                    <div class="rag-bubble ai">
+                      Open FIX-IT, tap "Post a Job", select Plumbing, and describe the issue. Available tradespeople near you will respond within minutes. For active leaks, shut the water valve under the sink first.
+                      <div><span class="rag-source">FIX-IT Help Docs · In-App Flow</span></div>
+                    </div>
+                  </div>
+                  <div class="rag-msg">
+                    <div class="rag-avatar">U</div>
+                    <div class="rag-bubble">How do I track my job once it's assigned?</div>
+                  </div>
+                  <div class="rag-msg">
+                    <div class="rag-avatar" style="background:var(--accent3);border-color:var(--accent3);color:#fff;font-size:8px;">AI</div>
+                    <div class="rag-bubble ai">
+                      The FIX-IT home screen shows your active job card Uber-style with real-time status updates. You'll get in-app notifications at each stage change.
+                      <div><span class="rag-source">FIX-IT User Guide</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="rag-stats" style="margin-top:8px;">
+                  <div><div class="rag-stat-val">RAG</div><div class="rag-stat-label">Architecture</div></div>
+                  <div><div class="rag-stat-val">Llama 3.3</div><div class="rag-stat-label">Model</div></div>
+                  <div><div class="rag-stat-val">Pinecone</div><div class="rag-stat-label">Vector DB</div></div>
+                  <div><div class="rag-stat-val">Groq</div><div class="rag-stat-label">Inference</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags"><span class="proj-tag">AI / RAG</span><span class="proj-tag">LLM</span><span class="proj-tag">FIX-IT App</span></div>
+            <h3 class="proj-title">Olivia: FIX-IT Support AI</h3>
+            <p class="proj-desc">Built Olivia, a production RAG-based AI support chatbot for FIX-IT App using Groq's Llama 3.3-70B, Pinecone vector store, Firebase, and Vercel. Indexed FIX-IT's help documentation and in-app flows so users get source-grounded, real-time answers to support questions , reducing support load while improving the customer experience on the home services platform.</p>
+            <div class="proj-outcomes">
+              <div class="proj-outcome-item"><span class="proj-outcome-num">Llama 3.3</span><span class="proj-outcome-label">LLM backbone</span></div>
+              <div class="proj-outcome-item"><span class="proj-outcome-num">Pinecone</span><span class="proj-outcome-label">Vector store</span></div>
+              <div class="proj-outcome-item"><span class="proj-outcome-num">Production</span><span class="proj-outcome-label">Live on Vercel</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Eadrom -->
+        <article class="proj-card">
+          <div class="proj-visual">
+            <div class="proj-visual-content">
+              <div class="eadrom-mockup">
+                <div style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(220,235,255,.3);margin-bottom:10px;">Eadrom Invisivel · IR + CNN · Anti-Piracy Detection</div>
+                <div style="display:flex;align-items:center;gap:14px;">
+                  <div class="eadrom-cam-frame">
+                    <div class="eadrom-scan-line"></div>
+                    <div style="position:absolute;top:0;left:0;right:0;bottom:0;">
+                      <div class="eadrom-box" style="left:15%;top:20%;width:35%;height:50%;"><span class="eadrom-label">Person 94%</span></div>
+                      <div class="eadrom-box" style="left:60%;top:35%;width:26%;height:36%;"><span class="eadrom-label">Person 78%</span></div>
+                    </div>
+                  </div>
+                  <div class="eadrom-conf-panel">
+                    <div style="font-size:10px;color:rgba(220,235,255,.35);margin-bottom:3px;letter-spacing:.04em;">Confidence scores</div>
+                    <div style="display:flex;align-items:center;gap:7px;">
+                      <span class="eadrom-conf-name">Person (near)</span>
+                      <div class="eadrom-conf-bar"><div class="eadrom-conf-fill" style="width:94%"></div></div>
+                      <span class="eadrom-conf-pct">94%</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:7px;">
+                      <span class="eadrom-conf-name">Person (far)</span>
+                      <div class="eadrom-conf-bar"><div class="eadrom-conf-fill" style="width:78%"></div></div>
+                      <span class="eadrom-conf-pct">78%</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:7px;">
+                      <span class="eadrom-conf-name">Background</span>
+                      <div class="eadrom-conf-bar"><div class="eadrom-conf-fill" style="width:12%"></div></div>
+                      <span class="eadrom-conf-pct">12%</span>
+                    </div>
+                  </div>
+                </div>
+                <div style="display:flex;gap:18px;padding-top:12px;border-top:1px solid rgba(255,255,255,.06);">
+                  <div><div style="font-family:var(--font-serif);font-size:18px;color:rgba(99,210,180,.85);">IR</div><div style="font-size:9px;color:rgba(220,235,255,.3);text-transform:uppercase;letter-spacing:.06em;">Sensor type</div></div>
+                  <div><div style="font-family:var(--font-serif);font-size:18px;color:rgba(99,210,180,.85);">CNN</div><div style="font-size:9px;color:rgba(220,235,255,.3);text-transform:uppercase;letter-spacing:.06em;">Model type</div></div>
+                  <div><div style="font-family:var(--font-serif);font-size:18px;color:rgba(99,210,180,.85);">Night</div><div style="font-size:9px;color:rgba(220,235,255,.3);text-transform:uppercase;letter-spacing:.06em;">Operation</div></div>
+                  <div><div style="font-family:var(--font-serif);font-size:18px;color:rgba(99,210,180,.85);">Maritime</div><div style="font-size:9px;color:rgba(220,235,255,.3);text-transform:uppercase;letter-spacing:.06em;">Domain</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags"><span class="proj-tag">Computer Vision</span><span class="proj-tag">CNN</span><span class="proj-tag">Ward-Off Piracy</span></div>
+            <h3 class="proj-title">Eadrom Invisivel</h3>
+            <p class="proj-desc">Co-built an infrared-based person detection system using a CNN model for nighttime maritime anti-piracy surveillance. Designed the full hardware-software pipeline , IR sensor input, bounding box detection, and confidence-scored output , enabling detection without visible light for maritime security. Co-founded Ward-Off Piracy as the product company behind the system.</p>
+            <div class="proj-outcomes">
+              <div class="proj-outcome-item"><span class="proj-outcome-num">IR + CNN</span><span class="proj-outcome-label">Detection stack</span></div>
+              <div class="proj-outcome-item"><span class="proj-outcome-num">Nighttime</span><span class="proj-outcome-label">Operation</span></div>
+              <div class="proj-outcome-item"><span class="proj-outcome-num">Co-founder</span><span class="proj-outcome-label">Role</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- e-con Dashboard -->
+        <article class="proj-card">
+          <div class="proj-visual">
+            <div class="proj-visual-content">
+              <div class="econ-mockup">
+                <div class="econ-topbar">
+                  <div class="econ-logo">e-con Product Intelligence Dashboard</div>
+                  <div style="display:flex;gap:5px;">
+                    <span class="econ-filter sel">Q4 2024</span>
+                    <span class="econ-filter">Q3</span><span class="econ-filter">Q2</span>
+                  </div>
+                </div>
+                <div class="econ-kpi-row">
+                  <div class="econ-kpi"><div class="econ-kpi-val">$650K</div><div class="econ-kpi-label">Bookings closed</div><div class="econ-kpi-delta">+$1.5M next quarter</div></div>
+                  <div class="econ-kpi"><div class="econ-kpi-val">340+</div><div class="econ-kpi-label">SKUs managed</div><div class="econ-kpi-delta">APAC, EU, NA</div></div>
+                  <div class="econ-kpi"><div class="econ-kpi-val">6</div><div class="econ-kpi-label">Competitors tracked</div><div class="econ-kpi-delta">Sony, Leopard, e-CAM</div></div>
+                </div>
+                <div style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.07);border-radius:7px;padding:12px;flex:1;">
+                  <div style="font-size:9px;color:rgba(220,235,255,.28);margin-bottom:7px;letter-spacing:.04em;">Unit volume by product family</div>
+                  <div class="econ-bars">
+                    <div class="econ-bar" style="height:45%"></div><div class="econ-bar hi" style="height:80%"></div>
+                    <div class="econ-bar" style="height:60%"></div><div class="econ-bar hi" style="height:90%"></div>
+                    <div class="econ-bar" style="height:55%"></div><div class="econ-bar" style="height:70%"></div>
+                    <div class="econ-bar hi" style="height:85%"></div><div class="econ-bar" style="height:40%"></div>
+                    <div class="econ-bar" style="height:65%"></div><div class="econ-bar hi" style="height:75%"></div>
+                    <div class="econ-bar" style="height:50%"></div><div class="econ-bar" style="height:58%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags"><span class="proj-tag">Power BI</span><span class="proj-tag">Product Lifecycle</span><span class="proj-tag">e-con Systems</span></div>
+            <h3 class="proj-title">Product Intelligence Dashboard</h3>
+            <p class="proj-desc">Built a Power BI dashboard at e-con Systems to support product lifecycle management across 340+ camera SKUs in 12 markets. Tracked competitive positioning against 6 rivals (Sony, Leopard, e-CAM) and surfaced pricing gaps and portfolio performance by product family and region. Dashboard directly supported $650K in closed bookings and roadmap decisions for the embedded vision line.</p>
+            <div class="proj-outcomes">
+              <div class="proj-outcome-item"><span class="proj-outcome-num">340+</span><span class="proj-outcome-label">SKUs managed</span></div>
+              <div class="proj-outcome-item"><span class="proj-outcome-num">12</span><span class="proj-outcome-label">Markets</span></div>
+              <div class="proj-outcome-item"><span class="proj-outcome-num">6</span><span class="proj-outcome-label">Competitors tracked</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- LaunchLens -->
+        <article class="proj-card">
+          <div class="proj-visual">
+            <div class="proj-visual-content">
+              <div class="ll-mockup">
+                <div class="ll-topbar">
+                  <div class="ll-logo">LaunchLens · Impact Workspace</div>
+                  <div class="ll-scenario-badge">Scenario: Component EOL · e-con AR0234</div>
+                </div>
+                <!-- Stat tiles -->
+                <div class="ll-stat-row">
+                  <div class="ll-stat">
+                    <div class="ll-stat-label">Baseline launch</div>
+                    <div class="ll-stat-val">2027-03-01</div>
+                  </div>
+                  <div class="ll-stat warn">
+                    <div class="ll-stat-label">Revised launch</div>
+                    <div class="ll-stat-val">2027-04-05</div>
+                  </div>
+                  <div class="ll-stat warn">
+                    <div class="ll-stat-label">Launch movement</div>
+                    <div class="ll-stat-val">+25 workdays</div>
+                  </div>
+                  <div class="ll-stat">
+                    <div class="ll-stat-label">Direct scenario cost</div>
+                    <div class="ll-stat-val">$10,000</div>
+                  </div>
+                </div>
+                <!-- Gantt milestone movement -->
+                <div class="ll-gantt-section">
+                  <div class="ll-gantt-label">Milestone movement · baseline vs revised</div>
+                  <div class="ll-gantt-row">
+                    <div class="ll-gantt-task">Prototype assembly</div>
+                    <div class="ll-gantt-track">
+                      <div class="ll-gantt-bar base" style="left:0%;width:25%"></div>
+                      <div class="ll-gantt-bar revised" style="left:0%;width:25%"></div>
+                    </div>
+                    <div class="ll-delta">+0d</div>
+                  </div>
+                  <div class="ll-gantt-row">
+                    <div class="ll-gantt-task">System integration</div>
+                    <div class="ll-gantt-track">
+                      <div class="ll-gantt-bar base" style="left:24%;width:28%"></div>
+                      <div class="ll-gantt-bar revised" style="left:24%;width:28%"></div>
+                    </div>
+                    <div class="ll-delta">+0d</div>
+                  </div>
+                  <div class="ll-gantt-row">
+                    <div class="ll-gantt-task">Validation &amp; certification</div>
+                    <div class="ll-gantt-track">
+                      <div class="ll-gantt-bar base" style="left:51%;width:24%"></div>
+                      <div class="ll-gantt-bar shifted" style="left:56%;width:30%"></div>
+                    </div>
+                    <div class="ll-delta red">+25d</div>
+                  </div>
+                  <div class="ll-gantt-row">
+                    <div class="ll-gantt-task">Pilot build &amp; launch</div>
+                    <div class="ll-gantt-track">
+                      <div class="ll-gantt-bar base" style="left:74%;width:26%"></div>
+                      <div class="ll-gantt-bar shifted" style="left:85%;width:15%"></div>
+                    </div>
+                    <div class="ll-delta red">+25d</div>
+                  </div>
+                </div>
+                <!-- Recovery path cards -->
+                <div class="ll-recovery-section">
+                  <div class="ll-recovery-label">Recovery paths</div>
+                  <div class="ll-recovery-cards">
+                    <div class="ll-rc">
+                      <div class="ll-rc-label">Accept revised</div>
+                      <div class="ll-rc-date">2027-04-05</div>
+                      <div class="ll-rc-sub">No additional cost</div>
+                    </div>
+                    <div class="ll-rc selected">
+                      <div class="ll-rc-label">Accelerate affected work</div>
+                      <div class="ll-rc-date">2027-03-17</div>
+                      <div class="ll-rc-sub">+$10K expedite cost</div>
+                    </div>
+                    <div class="ll-rc">
+                      <div class="ll-rc-label">Alternative component</div>
+                      <div class="ll-rc-date">Approval gate</div>
+                      <div class="ll-rc-sub">Customer recertification</div>
+                    </div>
+                    <div class="ll-rc">
+                      <div class="ll-rc-label">Last-time buy</div>
+                      <div class="ll-rc-date">2027-03-01</div>
+                      <div class="ll-rc-sub">Inventory &amp; carrying risk</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags"><span class="proj-tag">Hardware PLM</span><span class="proj-tag">Scheduling</span><span class="proj-tag">Supply Chain</span><span class="proj-tag">e-con Systems</span></div>
+            <h3 class="proj-title">LaunchLens</h3>
+            <p class="proj-desc">Built after watching EOL notifications arrive on components already certified inside customer camera products — where swapping even one part restarts the full customer approval process. LaunchLens is a browser-based prototype that maps component changes to downstream project tasks, computes schedule impact deterministically, and surfaces four recovery paths with cost and date trade-offs. Models 6 disruption scenarios across a synthetic camera-launch case; no AI, no backend, no guesswork — every date is calculated from the dependency graph.</p>
+            <div class="proj-outcomes">
+              <div class="proj-outcome-item"><span class="proj-outcome-num">6</span><span class="proj-outcome-label">Scenarios modeled</span></div>
+              <div class="proj-outcome-item"><span class="proj-outcome-num">+25d</span><span class="proj-outcome-label">Workdays tracked</span></div>
+              <div class="proj-outcome-item"><span class="proj-outcome-num">$10K</span><span class="proj-outcome-label">Cost modeled</span></div>
+              <div class="proj-outcome-item"><span class="proj-outcome-num">4</span><span class="proj-outcome-label">Recovery paths</span></div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- INDUSTRY WORK -->
+    <section class="section" id="experience">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Industry Work</h2>
+      </div>
+      <div class="exp-list">
+
+        <div class="exp-item">
+          <div class="exp-date">May 2026<br>Aug 2026</div>
+          <div>
+            <div class="exp-role">Product and Operations Intern</div>
+            <div class="exp-company">Fathom · MIE 572 · NC State Jenkins GSM</div>
+            <ul class="exp-bullets">
+              <li>Built ICP scoring framework and account prioritization pipeline across maritime safety, ports, and emergency response verticals for Fathom's ARMS ocean intelligence platform</li>
+              <li>Led "Emerging Blue Economy" vertical analysis , customer acquisition, positioning, and target market sizing</li>
+              <li>Ran stakeholder interviews with Fathom's defense and port leads; built reusable account-to-pilot playbook with OPPTIC-style framework</li>
+            </ul>
+            <div class="exp-tags"><span class="exp-tag">GTM Strategy</span><span class="exp-tag">Venture Analytics</span><span class="exp-tag">Market Research</span></div>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-date">Fall 2026<br>Present</div>
+          <div>
+            <div class="exp-role">Project Associate Consultant</div>
+            <div class="exp-company">AKG North America · NC State IMSE</div>
+            <ul class="exp-bullets">
+              <li>Conducting 14-week value stream optimization of the DDC Cooler line at AKG's Mebane, NC plant , covering Core Assembly, Brazing, Weld Prep, Tank Joining, Tank Welding, and Leak Testing</li>
+              <li>Owns the Cooler Welding station: direct-observation time studies, SAP data analysis (CO03/COOIS), and bottleneck root cause identification (Tank R is the dominant constraint on OTD in 85 of 141 orders)</li>
+              <li>Analyzed 543 real SAP work orders , found Cooler stage is 77.6% late (median 6 days) vs Core/Assembly at ~50% late</li>
+            </ul>
+            <div class="exp-tags"><span class="exp-tag">Value Stream Mapping</span><span class="exp-tag">SAP</span><span class="exp-tag">Time Study</span><span class="exp-tag">OTD Analysis</span></div>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-date">Jun 2026<br>Aug 2026</div>
+          <div>
+            <div class="exp-role">Product and Operations Intern</div>
+            <div class="exp-company">FIX-IT App LLC</div>
+            <ul class="exp-bullets">
+              <li>Built and shipped full-stack features in React Native and Node.js/Firebase , Uber-style job tracking, in-app chat from scratch, Stripe Connect integration, and PDF receipt downloads</li>
+              <li>Built Olivia, a production RAG AI chatbot using Groq Llama 3.3-70B, Pinecone, Firebase, and Vercel; deployed to production</li>
+              <li>Managed 120 purchase orders and supported operational workflows under founder Giovanni Borgeat</li>
+            </ul>
+            <div class="exp-tags"><span class="exp-tag">React Native</span><span class="exp-tag">Node.js</span><span class="exp-tag">Firebase</span><span class="exp-tag">RAG</span><span class="exp-tag">Product</span></div>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-date">Feb 2024<br>Mar 2025</div>
+          <div>
+            <div class="exp-role">Project Associate</div>
+            <div class="exp-company">e-con Systems · Chennai, India</div>
+            <ul class="exp-bullets">
+              <li>Closed $650K in product bookings and planned $1.5M pipeline for the following quarter across APAC, EU, and NA markets managing 340+ embedded camera SKUs</li>
+              <li>Led product lifecycle management from roadmap planning through SKU rationalization and discontinuation; built Power BI dashboard tracking competitive positioning across 6 rivals</li>
+              <li>Validated connectivity protocols (PCIe, MIPI, USB, GMSL, Ethernet, I2C, I3C) on OEM camera modules; contributed to PCIe Gen3 x4 camera interface integration and testing</li>
+            </ul>
+            <div class="exp-tags"><span class="exp-tag">Product Lifecycle</span><span class="exp-tag">Revenue Operations</span><span class="exp-tag">Power BI</span><span class="exp-tag">PCIe</span><span class="exp-tag">Roadmap Planning</span></div>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-date">Jan 2023<br>Feb 2023</div>
+          <div>
+            <div class="exp-role">Product and Data Analyst</div>
+            <div class="exp-company">Larsen &amp; Toubro · Chennai, India</div>
+            <ul class="exp-bullets">
+              <li>Analyzed procurement and logistics data for capital engineering projects across construction and industrial verticals</li>
+              <li>Supported project delivery reporting, tracking milestone completion and flagging timeline risks to project leads</li>
+            </ul>
+            <div class="exp-tags"><span class="exp-tag">Project Delivery</span><span class="exp-tag">Data Analysis</span><span class="exp-tag">Procurement</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LEADERSHIP -->
+    <section class="section" id="leadership">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Leadership</h2>
+      </div>
+      <div class="lead-grid">
+
+        <div class="lead-card">
+          <div class="lead-org">SVCE · Athletics</div>
+          <div class="lead-role">Handball Team Captain</div>
+          <div class="lead-desc">Led the SVCE handball team as captain , organized training sessions, coordinated inter-college fixtures, and managed team strategy and selection across the season.</div>
+          <div><div class="lead-metric">Captain</div><div class="lead-metric-label">SVCE Handball</div></div>
+        </div>
+
+        <div class="lead-card">
+          <div class="lead-org">SVCE · Athletics</div>
+          <div class="lead-role">Football Vice-Captain</div>
+          <div class="lead-desc">Served as vice-captain for the SVCE football team , supported match planning, team morale, and player coordination during inter-college tournaments.</div>
+          <div><div class="lead-metric">Vice-Captain</div><div class="lead-metric-label">SVCE Football</div></div>
+        </div>
+
+        <div class="lead-card">
+          <div class="lead-org">Tamil Nadu · Chess</div>
+          <div class="lead-role">State-Level Chess Player</div>
+          <div class="lead-desc">Competed at the state level in chess , representing Tamil Nadu in competitive circuits and developing strategic thinking under pressure that carries directly into operations and product work.</div>
+          <div><div class="lead-metric">State</div><div class="lead-metric-label">Level competitor</div></div>
+        </div>
+
+        <div class="lead-card">
+          <div class="lead-org">SVCE · IEEE</div>
+          <div class="lead-role">IEEE Executive Committee</div>
+          <div class="lead-desc">Served on the IEEE executive committee at SVCE , organized technical events, coordinated with national IEEE chapters, and represented SVCE at the international IEEE conference in Egypt.</div>
+          <div><div class="lead-metric">International</div><div class="lead-metric-label">IEEE Egypt representation</div></div>
+        </div>
+
+        <div class="lead-card">
+          <div class="lead-org">SVCE</div>
+          <div class="lead-role">Head of Entrepreneurship Club</div>
+          <div class="lead-desc">Led the SVCE Entrepreneurship Club , organized pitch events, founder workshops, and startup showcases. Won the best startup prize ($1,000) representing IEEE at an international competition in Egypt.</div>
+          <div><div class="lead-metric">$1,000</div><div class="lead-metric-label">Best startup prize · IEEE Egypt</div></div>
+        </div>
+
+        <div class="lead-card">
+          <div class="lead-org">NC State · Dean's Office</div>
+          <div class="lead-role">Dean's Suite Operations</div>
+          <div class="lead-desc">Managed events, inventory, and building access for the NC State Dean's Suite. Built and maintained an event management system to coordinate scheduling, stakeholder logistics, and high-profile Marshall events.</div>
+          <div><div class="lead-metric">Event CRM</div><div class="lead-metric-label">Built for Dean's Office</div></div>
+        </div>
+
+        <div class="lead-card">
+          <div class="lead-org">NC State</div>
+          <div class="lead-role">Graduate SCAC Representative</div>
+          <div class="lead-desc">Elected graduate representative on the Student Centers Advisory Committee at NC State , advocating for student needs in campus facility planning and student life policy decisions.</div>
+          <div><div class="lead-metric">Graduate Rep</div><div class="lead-metric-label">NC State SCAC</div></div>
+        </div>
+
+        <div class="lead-card">
+          <div class="lead-org">NC State · UPS</div>
+          <div class="lead-role">UPS Sustainable Development Fellow</div>
+          <div class="lead-desc">Selected for the UPS Sustainable Development Fellowship at NC State , executive mentorship, supply chain leadership curriculum, and real-world logistics case work sponsored by UPS.</div>
+          <div><div class="lead-metric">Fellow</div><div class="lead-metric-label">UPS SC Leadership Cohort</div></div>
+        </div>
+
+        <div class="lead-card">
+          <div class="lead-org">NC State · Talley Student Union</div>
+          <div class="lead-role">Information Assistant</div>
+          <div class="lead-desc">Served as information and operations lead at NC State's primary student union facility , coordinating campus services, supporting event logistics, and helping thousands of students navigate campus resources each semester.</div>
+          <div><div class="lead-metric">Talley</div><div class="lead-metric-label">Student Union · NC State</div></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <h2 class="section-title">Skills</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <div class="skill-group-title">Product Management</div>
+          <div class="skill-items">
+            <span class="skill-item">Product Lifecycle Management</span>
+            <span class="skill-item">Roadmap Planning</span>
+            <span class="skill-item">GTM Strategy</span>
+            <span class="skill-item">Competitive Analysis</span>
+            <span class="skill-item">Pricing Strategy</span>
+            <span class="skill-item">User Research</span>
+            <span class="skill-item">Agile / Scrum</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Project Management</div>
+          <div class="skill-items">
+            <span class="skill-item">Stakeholder Management</span>
+            <span class="skill-item">Root Cause Analysis</span>
+            <span class="skill-item">Risk and Contingency Planning</span>
+            <span class="skill-item">Cross-functional Coordination</span>
+            <span class="skill-item">Value Stream Mapping</span>
+            <span class="skill-item">Lean Six Sigma</span>
+            <span class="skill-item">OKR / KPI Tracking</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Data &amp; Supply Chain</div>
+          <div class="skill-items">
+            <span class="skill-item">Power BI</span>
+            <span class="skill-item">Python</span>
+            <span class="skill-item">SQL</span>
+            <span class="skill-item">Excel (Advanced)</span>
+            <span class="skill-item">SAP (CO03 / COOIS)</span>
+            <span class="skill-item">Demand Forecasting</span>
+            <span class="skill-item">Inventory Planning</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Technology</div>
+          <div class="skill-items">
+            <span class="skill-item">RAG / LLM</span>
+            <span class="skill-item">AI Product Development</span>
+            <span class="skill-item">React Native</span>
+            <span class="skill-item">Node.js / Firebase</span>
+            <span class="skill-item">Computer Vision / CNN</span>
+            <span class="skill-item">PCIe / Embedded Systems</span>
+            <span class="skill-item">HubSpot</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="section" id="certifications">
+      <div class="section-header">
+        <span class="section-num">05</span>
+        <h2 class="section-title">Certifications</h2>
+      </div>
+      <div class="certs-grid">
+        <div class="cert-card">
+          <div class="cert-issuer">Lean Six Sigma Council</div>
+          <div class="cert-name">Lean Six Sigma Green Belt</div>
+          <div class="cert-year">2025</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-issuer">Duke University · Coursera</div>
+          <div class="cert-name">AI Product Manager</div>
+          <div class="cert-year">2025</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-issuer">Google · Coursera</div>
+          <div class="cert-name">Foundations of Project Management</div>
+          <div class="cert-year">2025</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-issuer">Scrum Alliance</div>
+          <div class="cert-name">Scrum Product Management</div>
+          <div class="cert-year">2025</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-issuer">Coursera</div>
+          <div class="cert-name">Cybersecurity Fundamentals</div>
+          <div class="cert-year">2025</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="section-header">
+        <span class="section-num">06</span>
+        <h2 class="section-title">About</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm an MS Engineering Management candidate at NC State University (GPA 3.55, graduating May 2027) with a B.E. in Electronics and Communication Engineering. Originally from Chennai, India, now based in Raleigh, NC.</p>
+          <p>My work sits at the intersection of product, project, and operations. I've closed $650K in bookings at e-con Systems, shipped a production RAG chatbot at FIX-IT, built ICP scoring frameworks for a defense-tech startup, and delivered a $351K pricing strategy for a national restaurant chain. I'm equally comfortable defining a product roadmap, leading a cross-functional project, or digging into a dataset to find the root cause.</p>
+          <p>Off the work, I captained my college handball team, competed at state level in chess, and co-founded an anti-piracy hardware startup. Actively seeking co-op and full-time opportunities in product management, project leadership, and operations strategy.</p>
+        </div>
+        <div class="about-aside">
+          <div class="about-aside-block">
+            <div class="about-aside-label">Education</div>
+            <div class="about-aside-items">
+              <div class="about-aside-item">MS Engineering Management · NC State · GPA 3.55 · May 2027</div>
+              <div class="about-aside-item">B.E. Electronics and Communication Engineering · SVCE</div>
+            </div>
+          </div>
+          <div class="about-aside-block">
+            <div class="about-aside-label">Based in</div>
+            <div class="about-aside-items">
+              <div class="about-aside-item">Raleigh, NC</div>
+            </div>
+          </div>
+          <div class="about-aside-block">
+            <div class="about-aside-label">Contact</div>
+            <div class="about-aside-items">
+              <div class="about-aside-item">hrajesh2@ncsu.edu</div>
+              <div class="about-aside-item">919-438-7520</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LET'S CONNECT -->
+    <section class="connect-section" id="connect">
+      <div class="section-header">
+        <span class="section-num">07</span>
+        <h2 class="section-title">Let's Connect</h2>
+      </div>
+      <div class="connect-inner">
+        <div class="connect-text-col">
+          <div class="connect-heading">Open to co-ops<br>&amp; full-time roles</div>
+          <p class="connect-sub">Seeking co-op and full-time opportunities in product management, project leadership, and operations strategy starting Spring / Summer 2027. Reach out on LinkedIn or email.</p>
+        </div>
+        <div class="connect-links">
+          <a class="connect-link-item" href="https://www.linkedin.com/in/harsharajeshkanna/" target="_blank" rel="noopener">
+            <div class="connect-link-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </div>
+            <div>
+              <div class="connect-link-label">LinkedIn</div>
+              <div class="connect-link-value">linkedin.com/in/harsharajeshkanna</div>
+            </div>
+          </a>
+          <a class="connect-link-item" href="mailto:hrajesh2@ncsu.edu">
+            <div class="connect-link-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
+            <div>
+              <div class="connect-link-label">Email</div>
+              <div class="connect-link-value">hrajesh2@ncsu.edu</div>
+            </div>
+          </a>
+          <a class="connect-link-item" href="https://github.com/Harshavars" target="_blank" rel="noopener">
+            <div class="connect-link-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </div>
+            <div>
+              <div class="connect-link-label">GitHub</div>
+              <div class="connect-link-value">github.com/Harshavars</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+/* THEME */
+const themeBtn = document.getElementById('themeToggle');
+function getTheme(){try{return localStorage.getItem('theme')||'system'}catch(e){return'system'}}
+function setTheme(t){
+  try{localStorage.setItem('theme',t)}catch(e){}
+  document.documentElement.removeAttribute('data-theme');
+  if(t==='dark')document.documentElement.setAttribute('data-theme','dark');
+  else if(t==='light')document.documentElement.setAttribute('data-theme','light');
+  themeBtn.textContent = t==='dark'?'Dark mode':t==='light'?'Light mode':'System';
+}
+themeBtn.addEventListener('click',()=>{
+  const cur=getTheme();
+  setTheme(cur==='dark'?'light':cur==='light'?'system':'dark');
+});
+setTheme(getTheme());
+
+/* ACTIVE NAV */
+const sections=document.querySelectorAll('section[id]');
+const navLinks=document.querySelectorAll('#navLinks a[data-section]');
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      navLinks.forEach(l=>l.classList.remove('active'));
+      const link=document.querySelector('#navLinks a[data-section="'+e.target.id+'"]');
+      if(link)link.classList.add('active');
+    }
+  });
+},{rootMargin:'-20% 0px -70% 0px'});
+sections.forEach(s=>obs.observe(s));
+</script>
