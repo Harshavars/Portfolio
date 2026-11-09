@@ -1,4 +1,3 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Harsha Rajesh Kanna</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap">
@@ -334,6 +333,68 @@ h1,h2,h3,h4,h5{text-wrap:balance}
 .econ-bars{display:flex;align-items:flex-end;gap:3px;height:60px}
 .econ-bar{flex:1;border-radius:2px 2px 0 0;background:rgba(99,167,210,.28)}
 .econ-bar.hi{background:rgba(99,167,210,.6)}
+
+/* LaunchLens mockup */
+.ll-mockup{width:100%;min-height:300px;background:#10201A;padding:24px 26px;display:flex;flex-direction:column;gap:14px;font-family:var(--font-body)}
+.ll-topbar{display:flex;align-items:center;justify-content:space-between;padding-bottom:10px;border-bottom:1px solid rgba(99,210,170,.09)}
+.ll-logo{font-size:11px;font-weight:600;color:rgba(200,240,220,.7);letter-spacing:.04em;text-transform:uppercase}
+.ll-scenario-badge{font-size:9px;color:rgba(99,210,170,.55);border:1px solid rgba(99,210,170,.18);padding:2px 8px;border-radius:20px;letter-spacing:.04em}
+.ll-stat-row{display:flex;gap:8px;flex-wrap:wrap}
+.ll-stat{flex:1;min-width:100px;background:rgba(99,210,170,.05);border:1px solid rgba(99,210,170,.12);border-radius:8px;padding:10px 13px}
+.ll-stat.warn{background:rgba(220,100,60,.06);border-color:rgba(220,100,60,.2)}
+.ll-stat-label{font-size:8.5px;color:rgba(200,240,220,.3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:4px}
+.ll-stat-val{font-family:var(--font-serif);font-size:17px;color:rgba(200,240,220,.85);letter-spacing:-0.3px;line-height:1;font-variant-numeric:tabular-nums}
+.ll-stat.warn .ll-stat-val{color:#E8886A}
+.ll-gantt-section{display:flex;flex-direction:column;gap:6px}
+.ll-gantt-label{font-size:8.5px;color:rgba(200,240,220,.25);text-transform:uppercase;letter-spacing:.07em;margin-bottom:2px}
+.ll-gantt-row{display:flex;align-items:center;gap:7px}
+.ll-gantt-task{font-size:10px;color:rgba(200,240,220,.5);flex:0 0 130px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ll-gantt-track{flex:1;height:8px;background:rgba(255,255,255,.05);border-radius:4px;overflow:visible;position:relative}
+.ll-gantt-bar{height:8px;border-radius:4px;position:absolute;top:0}
+.ll-gantt-bar.base{background:rgba(200,240,220,.15)}
+.ll-gantt-bar.revised{background:rgba(99,210,170,.55);top:0}
+.ll-gantt-bar.shifted{background:rgba(220,120,60,.55)}
+.ll-delta{font-size:9px;font-variant-numeric:tabular-nums;min-width:34px;text-align:right;color:rgba(200,240,220,.3)}
+.ll-delta.red{color:#E8886A}
+.ll-recovery-section{display:flex;flex-direction:column;gap:5px}
+.ll-recovery-label{font-size:8.5px;color:rgba(200,240,220,.25);text-transform:uppercase;letter-spacing:.07em;margin-bottom:1px}
+.ll-recovery-cards{display:flex;gap:6px;flex-wrap:wrap}
+.ll-rc{flex:1;min-width:90px;background:rgba(99,210,170,.04);border:1px solid rgba(99,210,170,.1);border-radius:7px;padding:9px 11px}
+.ll-rc.selected{background:rgba(99,210,170,.1);border-color:rgba(99,210,170,.35)}
+.ll-rc-label{font-size:8.5px;color:rgba(200,240,220,.35);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.ll-rc-date{font-family:var(--font-serif);font-size:13px;color:rgba(200,240,220,.75);letter-spacing:-0.2px;line-height:1.1}
+.ll-rc.selected .ll-rc-date{color:#7DE8C0}
+.ll-rc-sub{font-size:8px;color:rgba(200,240,220,.25);margin-top:2px}
+.ll-rc.selected .ll-rc-sub{color:rgba(125,232,192,.45)}
+
+/* Home Energy Tools mockup */
+.energy-mockup{width:100%;min-height:300px;background:#0a0a0a;padding:24px;display:flex;flex-direction:column;gap:14px;font-family:var(--font-body)}
+.energy-topbar{display:flex;align-items:center;justify-content:space-between;padding-bottom:10px;border-bottom:1px solid rgba(227,25,55,.18)}
+.energy-logo{font-size:11px;font-weight:600;color:rgba(240,240,240,.8);letter-spacing:.06em;text-transform:uppercase}
+.energy-tab-row{display:flex;gap:5px}
+.energy-tab{font-size:9px;color:rgba(240,240,240,.3);border:1px solid rgba(255,255,255,.08);padding:2px 8px;border-radius:3px;letter-spacing:.04em}
+.energy-tab.sel{background:rgba(227,25,55,.12);color:rgba(227,25,55,.85);border-color:rgba(227,25,55,.3)}
+.energy-kpi-row{display:flex;gap:8px;flex-wrap:wrap}
+.energy-kpi{flex:1;min-width:70px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:7px;padding:9px 11px}
+.energy-kpi-val{font-family:var(--font-serif);font-size:19px;color:rgba(240,240,240,.9);letter-spacing:-0.5px;line-height:1;font-variant-numeric:tabular-nums}
+.energy-kpi-val.green{color:#00c48c}
+.energy-kpi-val.red{color:#e31937}
+.energy-kpi-label{font-size:8.5px;color:rgba(240,240,240,.28);text-transform:uppercase;letter-spacing:.05em;margin-top:2px}
+.energy-chart-area{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:7px;padding:12px;flex:1}
+.energy-chart-label{font-size:8.5px;color:rgba(240,240,240,.25);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.energy-soc-track{position:relative;height:44px;background:rgba(255,255,255,.04);border-radius:4px;overflow:hidden}
+.energy-soc-fill{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(0,196,140,.35),rgba(0,196,140,.12));border-top:1.5px solid #00c48c}
+.energy-solar-line{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent 0%,rgba(255,180,0,.6) 20%,rgba(255,180,0,.85) 50%,rgba(255,180,0,.6) 80%,transparent 100%)}
+.energy-configs{display:flex;flex-direction:column;gap:4px}
+.energy-config-row{display:flex;align-items:center;gap:7px;padding:5px 8px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.05);border-radius:5px}
+.energy-config-row.best{background:rgba(0,196,140,.07);border-color:rgba(0,196,140,.2)}
+.energy-config-name{font-size:9.5px;color:rgba(240,240,240,.55);flex:1}
+.energy-config-row.best .energy-config-name{color:rgba(0,196,140,.85)}
+.energy-config-bar{flex:0 0 60px;height:5px;background:rgba(255,255,255,.07);border-radius:3px;overflow:hidden}
+.energy-config-fill{height:100%;border-radius:3px;background:rgba(255,255,255,.25)}
+.energy-config-row.best .energy-config-fill{background:#00c48c}
+.energy-config-score{font-size:9px;color:rgba(240,240,240,.3);min-width:24px;text-align:right;font-variant-numeric:tabular-nums}
+.energy-config-row.best .energy-config-score{color:#00c48c}
 
 /* RESPONSIVE */
 @media(max-width:920px){
@@ -985,6 +1046,178 @@ h1,h2,h3,h4,h5{text-wrap:balance}
           </div>
         </article>
 
+        <!-- LaunchLens -->
+        <article class="proj-card">
+          <div class="proj-visual">
+            <div class="proj-visual-content">
+              <div class="ll-mockup">
+                <div class="ll-topbar">
+                  <div class="ll-logo">LaunchLens · Impact Workspace</div>
+                  <div class="ll-scenario-badge">Scenario: Component EOL · e-con AR0234</div>
+                </div>
+                <!-- Stat tiles -->
+                <div class="ll-stat-row">
+                  <div class="ll-stat">
+                    <div class="ll-stat-label">Baseline launch</div>
+                    <div class="ll-stat-val">2027-03-01</div>
+                  </div>
+                  <div class="ll-stat warn">
+                    <div class="ll-stat-label">Revised launch</div>
+                    <div class="ll-stat-val">2027-04-05</div>
+                  </div>
+                  <div class="ll-stat warn">
+                    <div class="ll-stat-label">Launch movement</div>
+                    <div class="ll-stat-val">+25 workdays</div>
+                  </div>
+                  <div class="ll-stat">
+                    <div class="ll-stat-label">Direct scenario cost</div>
+                    <div class="ll-stat-val">$10,000</div>
+                  </div>
+                </div>
+                <!-- Gantt milestone movement -->
+                <div class="ll-gantt-section">
+                  <div class="ll-gantt-label">Milestone movement · baseline vs revised</div>
+                  <div class="ll-gantt-row">
+                    <div class="ll-gantt-task">Prototype assembly</div>
+                    <div class="ll-gantt-track">
+                      <div class="ll-gantt-bar base" style="left:0%;width:25%"></div>
+                      <div class="ll-gantt-bar revised" style="left:0%;width:25%"></div>
+                    </div>
+                    <div class="ll-delta">+0d</div>
+                  </div>
+                  <div class="ll-gantt-row">
+                    <div class="ll-gantt-task">System integration</div>
+                    <div class="ll-gantt-track">
+                      <div class="ll-gantt-bar base" style="left:24%;width:28%"></div>
+                      <div class="ll-gantt-bar revised" style="left:24%;width:28%"></div>
+                    </div>
+                    <div class="ll-delta">+0d</div>
+                  </div>
+                  <div class="ll-gantt-row">
+                    <div class="ll-gantt-task">Validation &amp; certification</div>
+                    <div class="ll-gantt-track">
+                      <div class="ll-gantt-bar base" style="left:51%;width:24%"></div>
+                      <div class="ll-gantt-bar shifted" style="left:56%;width:30%"></div>
+                    </div>
+                    <div class="ll-delta red">+25d</div>
+                  </div>
+                  <div class="ll-gantt-row">
+                    <div class="ll-gantt-task">Pilot build &amp; launch</div>
+                    <div class="ll-gantt-track">
+                      <div class="ll-gantt-bar base" style="left:74%;width:26%"></div>
+                      <div class="ll-gantt-bar shifted" style="left:85%;width:15%"></div>
+                    </div>
+                    <div class="ll-delta red">+25d</div>
+                  </div>
+                </div>
+                <!-- Recovery path cards -->
+                <div class="ll-recovery-section">
+                  <div class="ll-recovery-label">Recovery paths</div>
+                  <div class="ll-recovery-cards">
+                    <div class="ll-rc">
+                      <div class="ll-rc-label">Accept revised</div>
+                      <div class="ll-rc-date">2027-04-05</div>
+                      <div class="ll-rc-sub">No additional cost</div>
+                    </div>
+                    <div class="ll-rc selected">
+                      <div class="ll-rc-label">Accelerate affected work</div>
+                      <div class="ll-rc-date">2027-03-17</div>
+                      <div class="ll-rc-sub">+$10K expedite cost</div>
+                    </div>
+                    <div class="ll-rc">
+                      <div class="ll-rc-label">Alternative component</div>
+                      <div class="ll-rc-date">Approval gate</div>
+                      <div class="ll-rc-sub">Customer recertification</div>
+                    </div>
+                    <div class="ll-rc">
+                      <div class="ll-rc-label">Last-time buy</div>
+                      <div class="ll-rc-date">2027-03-01</div>
+                      <div class="ll-rc-sub">Inventory &amp; carrying risk</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags"><span class="proj-tag">Hardware PLM</span><span class="proj-tag">Scheduling</span><span class="proj-tag">Supply Chain</span><span class="proj-tag">e-con Systems</span></div>
+            <h3 class="proj-title">LaunchLens</h3>
+            <p class="proj-desc">Built after watching EOL notifications arrive on components already certified inside customer camera products — where swapping even one part restarts the full customer approval process. LaunchLens is a browser-based prototype that maps component changes to downstream project tasks, computes schedule impact deterministically, and surfaces four recovery paths with cost and date trade-offs. Models 6 disruption scenarios across a synthetic camera-launch case; no AI, no backend, no guesswork — every date is calculated from the dependency graph.</p>
+            <div class="proj-outcomes">
+              <div class="proj-outcome-item"><span class="proj-outcome-num">6</span><span class="proj-outcome-label">Scenarios modeled</span></div>
+              <div class="proj-outcome-item"><span class="proj-outcome-num">+25d</span><span class="proj-outcome-label">Workdays tracked</span></div>
+              <div class="proj-outcome-item"><span class="proj-outcome-num">$10K</span><span class="proj-outcome-label">Cost modeled</span></div>
+              <div class="proj-outcome-item"><span class="proj-outcome-num">4</span><span class="proj-outcome-label">Recovery paths</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Home Energy Tools -->
+        <article class="proj-card">
+          <div class="proj-visual">
+            <div class="proj-visual-content">
+              <div class="energy-mockup">
+                <div class="energy-topbar">
+                  <div class="energy-logo">Home Energy Tools · Tesla Stack</div>
+                  <div class="energy-tab-row">
+                    <span class="energy-tab sel">Optimizer</span>
+                    <span class="energy-tab">Backup Planner</span>
+                  </div>
+                </div>
+                <div class="energy-kpi-row">
+                  <div class="energy-kpi"><div class="energy-kpi-val green">87%</div><div class="energy-kpi-label">Solar self-use</div></div>
+                  <div class="energy-kpi"><div class="energy-kpi-val green">$0.42</div><div class="energy-kpi-label">Grid cost/day</div></div>
+                  <div class="energy-kpi"><div class="energy-kpi-val">13.5 kWh</div><div class="energy-kpi-label">Battery cap</div></div>
+                  <div class="energy-kpi"><div class="energy-kpi-val red">3 hrs</div><div class="energy-kpi-label">EV charge gap</div></div>
+                </div>
+                <div class="energy-chart-area">
+                  <div class="energy-chart-label">24 h battery SoC + solar generation</div>
+                  <div class="energy-soc-track">
+                    <div class="energy-soc-fill" style="height:62%"></div>
+                    <div class="energy-solar-line"></div>
+                  </div>
+                  <div style="display:flex;justify-content:space-between;font-size:8px;color:rgba(240,240,240,.2);margin-top:4px;font-variant-numeric:tabular-nums;"><span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>24:00</span></div>
+                  <div style="display:flex;gap:12px;margin-top:6px;">
+                    <div style="display:flex;align-items:center;gap:4px;"><div style="width:10px;height:2px;background:#00c48c;border-radius:1px"></div><span style="font-size:8px;color:rgba(240,240,240,.3);">SoC</span></div>
+                    <div style="display:flex;align-items:center;gap:4px;"><div style="width:10px;height:2px;background:rgba(255,180,0,.7);border-radius:1px"></div><span style="font-size:8px;color:rgba(240,240,240,.3);">Solar</span></div>
+                  </div>
+                </div>
+                <div>
+                  <div style="font-size:8.5px;color:rgba(240,240,240,.25);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px;">Backup config scoring · 6 options</div>
+                  <div class="energy-configs">
+                    <div class="energy-config-row best">
+                      <span class="energy-config-name">2× Powerwall + V2H</span>
+                      <div class="energy-config-bar"><div class="energy-config-fill" style="width:92%"></div></div>
+                      <span class="energy-config-score">9</span>
+                    </div>
+                    <div class="energy-config-row">
+                      <span class="energy-config-name">Powerwall 3 (2×)</span>
+                      <div class="energy-config-bar"><div class="energy-config-fill" style="width:70%"></div></div>
+                      <span class="energy-config-score">7</span>
+                    </div>
+                    <div class="energy-config-row">
+                      <span class="energy-config-name">V2H Only</span>
+                      <div class="energy-config-bar"><div class="energy-config-fill" style="width:48%"></div></div>
+                      <span class="energy-config-score">5</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags"><span class="proj-tag">Energy Systems</span><span class="proj-tag">Tesla Stack</span><span class="proj-tag">Interactive Demo</span></div>
+            <h3 class="proj-title">Home Energy Tools</h3>
+            <p class="proj-desc">Built two interactive browser tools exploring residential energy optimization with Tesla hardware. The Home Energy Optimizer simulates 24-hour battery state-of-charge across solar generation, EV charging, and home load , surfacing cost, self-consumption, and grid dependency trade-offs. The Backup Sizing Planner scores six backup configurations (Powerwall 1×/2×/3×, V2H only, hybrids) across critical load coverage, budget fit, outage frequency, and full-load backup days , recommending the best fit with a scored comparison table. Built with Chart.js; Tesla-stack dark UI.</p>
+            <div class="proj-outcomes">
+              <div class="proj-outcome-item"><span class="proj-outcome-num">24 h</span><span class="proj-outcome-label">SoC simulation</span></div>
+              <div class="proj-outcome-item"><span class="proj-outcome-num">6</span><span class="proj-outcome-label">Backup configs scored</span></div>
+              <div class="proj-outcome-item"><span class="proj-outcome-num">2 tools</span><span class="proj-outcome-label">In one app</span></div>
+              <div class="proj-outcome-item"><a href="https://claude.ai/artifact/DxJcgg7NSQJDE4xoRcQyLz" target="_blank" rel="noopener" style="color:var(--accent3);font-family:var(--font-serif);font-size:22px;letter-spacing:-0.5px;line-height:1;text-decoration:none;">Live ↗</a><span class="proj-outcome-label">Try the demo</span></div>
+            </div>
+          </div>
+        </article>
+
       </div>
     </section>
 
@@ -1349,5 +1582,3 @@ const obs=new IntersectionObserver(entries=>{
 },{rootMargin:'-20% 0px -70% 0px'});
 sections.forEach(s=>obs.observe(s));
 </script>
-
-</body></html>
